@@ -10,7 +10,9 @@
     <h1>Boba Menu</h1>
 
 {% for item in menu %}
-   <h2>{{item}}</h2> 
+   <h2>{{item}}</h2>
+   <h4>{{item.quantity}}</h4>
+   <h4>{{item.price}} £</h4> 
 {% endfor %}
 </body>
 </html>
