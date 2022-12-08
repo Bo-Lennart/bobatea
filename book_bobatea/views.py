@@ -4,9 +4,9 @@ from .models import TeaMenu
 # Create your views here.
 
 
-def get_home_page(request):
+def get_menu(request):
     menu = TeaMenu.objects.all()
-    context = {
-        'items': menu
-    }
-    return render(request, '../templates/index.html', context)
+
+    context = {'menu': menu}
+
+    return render(request, '../templates/base.html', context)
