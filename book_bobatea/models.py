@@ -14,11 +14,10 @@ class TeaMenu(models.Model):
     def __str__(self):
         return self.name
 
-    
     def save(self, *args, **kwargs):
         if not self.slug and self.name:
             self.slug = slugify(self.name)
-        super(TeaMenu , self).save(*args, **kwargs)
+        super(TeaMenu, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Tea Menu'
