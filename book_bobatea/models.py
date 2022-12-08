@@ -8,3 +8,7 @@ class TeaMenu(models.Model):
     description = models.TextField(max_length=500)
     quantity = models.IntegerField()
     price = models.IntegerField()
+
+
+    def __str__(self):
+        return self.name
