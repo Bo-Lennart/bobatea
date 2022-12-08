@@ -22,4 +22,4 @@ class TeaMenu(models.Model):
 
     class Meta:
         verbose_name = 'Tea Menu'
-        verbose_name_plural = 'Tea Menus'
+        verbose_name_plural = 'Tea Menu'
