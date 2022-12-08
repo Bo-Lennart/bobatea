@@ -1,1 +1,1 @@
-web: gunicorn bobatea.wsgi
+web: gunicorn bookboba.wsgi
