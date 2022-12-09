@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import TeaMenu, AboutUs, StaffCrew
-from .forms import ReserveTableForm
+from .forms import ReserveTableForm, ContactForm
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
@@ -40,5 +42,20 @@ def about(request):
 
 
 def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            pass
 
-    return render(request, '../templates/contact.html', )
+    else:
+        form = ContactForm()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, '../templates/contact.html', context)
+
+
+def send_success(request):
+    pass
