@@ -41,9 +41,23 @@ class AboutUs(models.Model):
     content = models.TextField()
     image = models.ImageField(upload_to='about_us/')
 
+    class Meta:
+        verbose_name = 'About Us'
+        verbose_name_plural = 'About Us'
+
+    def __str__(self):
+        return self.name
+
 
 class StaffCrew(models.Model):
     name = models.CharField(max_length=50)
     subtitle = models.CharField(max_length=50)
     bio = models.TextField()
     image = models.ImageField(upload_to='staff_crew/')
+
+    class Meta:
+        verbose_name = 'Staff Crew'
+        verbose_name_plural = 'Staff Crew'
+
+    def __str__(self):
+        return self.name
