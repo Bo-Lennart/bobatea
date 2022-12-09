@@ -8,10 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-
-
 <h1>Booking page</h1>
 
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+
+    <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>
