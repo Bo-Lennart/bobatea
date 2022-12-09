@@ -22,3 +22,15 @@ class TeaMenu(models.Model):
     class Meta:
         verbose_name = 'Tea Menu'
         verbose_name_plural = 'Tea Menu'
+
+
+class Reservation(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone = models.IntegerField()
+    numer_of_guests = models.IntegerField()
+    date = models.DateField()
+    time = models.TimeField()
+
+    def __str__(self):
+        return self.name
