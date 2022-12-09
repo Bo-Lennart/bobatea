@@ -20,5 +20,5 @@ from book_bobatea.views import get_menu, reserve_table
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_menu, name='menu'),
-    path('', reserve_table, name='reserve_table')
+    path('reservation', reserve_table, name='reserve_table')
 ]

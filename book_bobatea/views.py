@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import TeaMenu, Reservation
+from .models import TeaMenu
+from .forms import ReserveTableForm
 
 # Create your views here.
 
@@ -13,5 +14,7 @@ def get_menu(request):
 
 
 def reserve_table(request):
-    return render(request, '../templates/reservation.html', name='reserv_table')
-    
+  
+    context = {}
+
+    return render(request, '../templates/reservation.html', context)
