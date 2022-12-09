@@ -34,3 +34,16 @@ class Reservation(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class AboutUs(models.Model):
+    title = models.CharField(max_length=50)
+    content = models.TextField()
+    image = models.ImageField(upload_to='about_us/')
+
+
+class StaffCrew(models.Model):
+    name = models.CharField(max_length=50)
+    subtitle = models.CharField(max_length=50)
+    bio = models.TextField()
+    image = models.ImageField(upload_to='staff_crew/')
