@@ -37,9 +37,8 @@ class Reservation(models.Model):
 
 
 class AboutUs(models.Model):
-    title = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
     content = models.TextField()
-    image = models.ImageField(upload_to='about_us/')
 
     class Meta:
         verbose_name = 'About Us'
@@ -53,7 +52,6 @@ class StaffCrew(models.Model):
     name = models.CharField(max_length=50)
     subtitle = models.CharField(max_length=50)
     bio = models.TextField()
-    image = models.ImageField(upload_to='staff_crew/')
 
     class Meta:
         verbose_name = 'Staff Crew'

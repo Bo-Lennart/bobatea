@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import TeaMenu
+from .models import TeaMenu, AboutUs, StaffCrew
 from .forms import ReserveTableForm
 
 # Create your views here.
@@ -25,3 +25,16 @@ def reserve_table(request):
     context = {'form': reserve_form}
 
     return render(request, '../templates/reservation.html', context)
+
+
+def about(request):
+    about = AboutUs.objects.last()
+    staff_crew = StaffCrew.objects.last()
+
+    context = {
+        'about': about ,
+        'staff_crew': staff_crew ,
+    }
+
+    return render(request, '../templates/about_us.html', context)
+
