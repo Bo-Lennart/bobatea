@@ -16,7 +16,7 @@ def get_menu(request):
 def reserve_table(request):
     reserve_form = ReserveTableForm()
 
-    if request.method == 'POST' :
+    if request.method == 'POST':
         reserve_form = ReserveTableForm(request.POST)
 
         if reserve_form.is_valid():
@@ -38,3 +38,7 @@ def about(request):
 
     return render(request, '../templates/about_us.html', context)
 
+
+def contact(request):
+
+    return render(request, '../templates/contact.html', )

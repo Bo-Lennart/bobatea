@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from book_bobatea.views import get_menu, reserve_table, about
+from book_bobatea.views import get_menu, reserve_table, about, contact
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_menu, name='menu'),
     path('reservation', reserve_table, name='reserve_table'),
     path('about_us/', about, name='about'),
+    path('contact/', contact, name='contact'),
 ]
