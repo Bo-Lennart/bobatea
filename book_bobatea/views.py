@@ -32,8 +32,8 @@ def about(request):
     staff_crew = StaffCrew.objects.last()
 
     context = {
-        'about': about ,
-        'staff_crew': staff_crew ,
+        'about': about,
+        'staff_crew': staff_crew,
     }
 
     return render(request, '../templates/about_us.html', context)
