@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .models import TeaMenu, AboutUs, StaffCrew
 from .forms import ReserveTableForm
-from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
