@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import TeaMenu, AboutUs, StaffCrew, Reservation
-from .forms import ReserveTableForm
+from .forms import ReserveTableForm, add_item_to_menu_form
 
 # Create your views here.
 
@@ -13,7 +13,17 @@ def get_menu(request):
 
 
 def add_menu_item(request):
-    return render(request, '../templates/add_menu_item.html')
+    add_item = add_item_to_menu_form()
+
+    if request.method == 'POST':
+        add_item = add_item_to_menu_form(request.POST)
+        if add_item.is_valid():
+            add_item.save()
+        return redirect(staff_page)
+
+    context = {'add_item': add_item}
+
+    return render(request, '../templates/add_menu_item.html', context)
 
 
 def reserve_table(request):

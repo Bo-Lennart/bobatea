@@ -1,5 +1,5 @@
 from django import forms
-from .models import Reservation
+from .models import Reservation, TeaMenu
 
 
 class ReserveTableForm(forms.ModelForm):
@@ -8,3 +8,9 @@ class ReserveTableForm(forms.ModelForm):
         model = Reservation
         fields = '__all__'
 
+
+class add_item_to_menu_form(forms.ModelForm):
+
+    class Meta:
+        model = TeaMenu
+        fields = '__all__'

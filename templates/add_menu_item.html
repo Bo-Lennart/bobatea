@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Add Menu Item</h1>
-
-
+    <h1>Add Menu Item:</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ add_item }}
+            <p>
+                <button type="submit">Add item to menu</button>
+            </p>
+        </div>
+    </form>
 </body>
 </html>
