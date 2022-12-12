@@ -3,15 +3,28 @@
 
 <h1>Edit Menu:</h1>
 {% for item in menu %}
-   <h2>{{item}}</h2>
-   <h4>{{item.quantity}}</h4>
-   <h4>{{item.price}} £</h4> 
+<table>
+    <tr>
+    <td>{{item}}</td>  
+    <td>{{item.quantity}}</td>  
+    <td>{{item.price}} £</td>
+    </tr>
+</table>
 {% endfor %}
 
 <h1>Edit Reservations:</h1>
 
 {% for reservation in reservations %}
-   <h4>Reservation made by: {{reservation.name}}</h4>
-   <h4>Reserved Date: {{reservation.date}}</h4> 
-   <h4>Number of Guests: {{reservation.number_of_guests}}</h4> 
+<table>
+    <tr>
+    <td>Reservation made by: {{reservation.name}}</td> 
+    </tr>
+    <tr>
+        <td>Reserved Date: {{reservation.date}}</td>  
+    </tr>
+    <tr>
+        <td>Number of Guests: {{reservation.number_of_guests}}</td>
+    </tr>
+    
+</table>
 {% endfor %}
