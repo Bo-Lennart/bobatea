@@ -38,6 +38,7 @@
         </nav>
     </header>
     <h1>Update Menu Item:</h1>
+    {% if user.is_authenticated %}
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
@@ -46,5 +47,6 @@
             </p>
         </div>
     </form>
+    {% endif %}
 </body>
 </html>

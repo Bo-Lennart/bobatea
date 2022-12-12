@@ -42,7 +42,7 @@
         </header>
 
 <h1>Edit Reservation</h1>
-
+{% if user.is_authenticated %}
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -50,7 +50,7 @@
             <button type="submit">Update Reservation</button>
         </p>
     </div>
-
+    {% endif %}
 <footer>
     <div id="social_media_links">
         <ul>

@@ -38,6 +38,7 @@
         </nav>
     </header>
     <h1>Add Menu Item:</h1>
+    {% if user.is_authenticated %}
     <form method="POST" action="">
         {% csrf_token %}
         {{ add_item.as_p }}
@@ -45,6 +46,7 @@
                 <button type="submit">Add item to menu</button>
             </p>
         </div>
+        {% endif %}
     </form>
 </body>
 </html>

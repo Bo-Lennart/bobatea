@@ -40,7 +40,7 @@
     </header>
     <h1>STAFF PAGE</h1>
 
-
+    {% if user.is_authenticated %}
 <h1>Edit Menu:</h1>
 {% for item in menu %}
 <table>
@@ -85,6 +85,7 @@
 {% endfor %}
 </table>
 <a href="{% url 'staff_reserve_table' %}">Make Reservation</a>
+{% endif %}
 
 </body>
 </html>

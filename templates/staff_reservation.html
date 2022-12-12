@@ -42,6 +42,7 @@
         </header>
 
 <h1>Staff Reservation Page</h1>
+{% if user.is_authenticated %}
 
 <form action="" method="POST">
     {% csrf_token %}
@@ -49,6 +50,7 @@
 
     <button type="submit">Submit</button>
 </form>
+{% endif %}
 
 <footer>
     <div id="social_media_links">
