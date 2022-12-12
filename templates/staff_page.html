@@ -1,4 +1,14 @@
-<h1>STAFF PAGE</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Page</title>
+</head>
+<body>
+    <h1>STAFF PAGE</h1>
 
 
 <h1>Edit Menu:</h1>
@@ -9,22 +19,21 @@
     <td>{{item.quantity}}</td>  
     <td>{{item.price}} £</td>
     </tr>
-</table>
 {% endfor %}
+</table>
+<a href="{% url 'add_menu_item' %}"> Add item to menu</a>
 
 <h1>Edit Reservations:</h1>
 
 {% for reservation in reservations %}
-<table>
+   <table>
     <tr>
-    <td>Reservation made by: {{reservation.name}}</td> 
+    <td>Reservation made by: {{reservation.name}}</td>  
+    <td>Reserved Date: {{reservation.date}}</td>  
+    <td>Number of Guests: {{reservation.number_of_guests}}</td>
     </tr>
-    <tr>
-        <td>Reserved Date: {{reservation.date}}</td>  
-    </tr>
-    <tr>
-        <td>Number of Guests: {{reservation.number_of_guests}}</td>
-    </tr>
-    
-</table>
 {% endfor %}
+</table>
+
+</body>
+</html>

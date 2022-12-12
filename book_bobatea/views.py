@@ -12,6 +12,10 @@ def get_menu(request):
     return render(request, '../templates/base.html', context)
 
 
+def add_menu_item(request):
+    return render(request, '../templates/add_menu_item.html')
+
+
 def reserve_table(request):
     reserve_form = ReserveTableForm()
 
