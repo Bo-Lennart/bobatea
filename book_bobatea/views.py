@@ -93,8 +93,8 @@ def edit_menu(request, TeaMenu_id):
 
 
 def edit_reservation(request, Reservation_id):
-    booking = get_object_or_404(Reservation, id=Reservation_id)
-    form = ReserveTableForm(instance=booking)
+    reservation = get_object_or_404(Reservation, id=Reservation_id)
+    form = ReserveTableForm(instance=reservation)
     context = {
         'form': form
     }
