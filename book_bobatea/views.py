@@ -117,7 +117,7 @@ def delete_menu_item(request, TeaMenu_id):
     return redirect(staff_page)
 
 
-def delete_reservation(request, Reservation_id):
+def remove_reservation(request, Reservation_id):
     reservation = get_object_or_404(Reservation, id=Reservation_id)
     reservation.delete()
     return redirect(staff_page)
