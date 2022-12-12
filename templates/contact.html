@@ -20,6 +20,24 @@
                     <li id="match_link" class="nav_link">
                         <a href="{% url 'contact' %}" aria-label="Contact us">Contact Us</a>
                     </li>
+                    <li>
+                        <a aria-current="page" href="{% url 'menu' %}">Home</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'bookings' %}">Bookings</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'staff' %}">Edit Menu</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'account_login' %}">Staff Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

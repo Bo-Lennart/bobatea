@@ -42,3 +42,13 @@ def about(request):
 def contact(request):
 
     return render(request, '../templates/contact.html', )
+
+
+def staff_page(request):
+
+    return render(request, '../templates/staff_page.html', )
+
+
+def manage_bookings(request):
+
+    return render(request, '../templates/manage_bookings.html', )
