@@ -31,7 +31,6 @@ def reserve_table(request):
 
     if request.method == 'POST':
         reserve_form = ReserveTableForm(request.POST)
-
         if reserve_form.is_valid():
             reserve_form.save()
 
@@ -84,6 +83,11 @@ def add_menu_item(request):
 
 def edit_menu(request, TeaMenu_id):
     item = get_object_or_404(TeaMenu, id=TeaMenu_id)
+    if request.method == 'POST':
+        add_item = add_item_to_menu_form(request.POST, instance=item)
+        if add_item.is_valid():
+            add_item.save()
+        return redirect(staff_page)
     form = add_item_to_menu_form(instance=item)
     context = {
         'form': form
@@ -94,6 +98,11 @@ def edit_menu(request, TeaMenu_id):
 
 def edit_reservation(request, Reservation_id):
     reservation = get_object_or_404(Reservation, id=Reservation_id)
+    if request.method == 'POST':
+        reserve_form = ReserveTableForm(request.POST, instance=reservation)
+        if reserve_form.is_valid():
+            reserve_form.save()
+        return redirect(staff_page)
     form = ReserveTableForm(instance=reservation)
     context = {
         'form': form
