@@ -30,12 +30,13 @@ class Reservation(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
     phone = models.IntegerField()
-    numer_of_guests = models.IntegerField()
+    number_of_guests = models.IntegerField()
     date = models.DateField()
     time = models.TimeField()
 
     def __str__(self):
         return self.name
+        
 
 
 class AboutUs(models.Model):

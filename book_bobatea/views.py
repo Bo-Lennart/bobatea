@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from .models import TeaMenu, AboutUs, StaffCrew
+from .models import TeaMenu, AboutUs, StaffCrew, Reservation
 from .forms import ReserveTableForm
 
 # Create your views here.
-
 
 def get_menu(request):
     menu = TeaMenu.objects.all()
@@ -45,10 +44,11 @@ def contact(request):
 
 
 def staff_page(request):
+    menu = TeaMenu.objects.all()
+    reservations = Reservation.objects.all()
 
-    return render(request, '../templates/staff_page.html', )
+    context = {'menu': menu,
+    'reservations': reservations
+    }
 
-
-def manage_bookings(request):
-
-    return render(request, '../templates/manage_bookings.html', )
+    return render(request, '../templates/staff_page.html', context)

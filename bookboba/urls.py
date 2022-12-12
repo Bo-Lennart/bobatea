@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from book_bobatea.views import get_menu, reserve_table, about, contact, staff_page, manage_bookings
+from book_bobatea.views import get_menu, reserve_table, about, contact, staff_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,8 +24,5 @@ urlpatterns = [
     path('about_us/', about, name='about'),
     path('contact/', contact, name='contact'),
     path('staff_page/', staff_page, name='staff'),
-    path('manage_bookings/', manage_bookings, name='bookings'),
     path('accounts/', include('allauth.urls')),
 ]
-
-

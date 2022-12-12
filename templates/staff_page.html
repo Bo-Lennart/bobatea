@@ -1,1 +1,17 @@
 <h1>STAFF PAGE</h1>
+
+
+<h1>Edit Menu:</h1>
+{% for item in menu %}
+   <h2>{{item}}</h2>
+   <h4>{{item.quantity}}</h4>
+   <h4>{{item.price}} £</h4> 
+{% endfor %}
+
+<h1>Edit Reservations:</h1>
+
+{% for reservation in reservations %}
+   <h4>Reservation made by: {{reservation.name}}</h4>
+   <h4>Reserved Date: {{reservation.date}}</h4> 
+   <h4>Number of Guests: {{reservation.number_of_guests}}</h4> 
+{% endfor %}
