@@ -80,3 +80,12 @@ def staff_page(request):
     }
 
     return render(request, '../templates/staff_page.html', context)
+
+
+def edit_menu(request, TeaMenu_id):
+    return render(request, '../templates/edit_menu.html')
+
+
+def edit_reservation(request, Reservation_id):
+    return render(request, '../templates/edit_reservation.html')
+    
