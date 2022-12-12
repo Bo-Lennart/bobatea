@@ -109,3 +109,15 @@ def edit_reservation(request, Reservation_id):
     }
 
     return render(request, '../templates/edit_reservation.html', context)
+
+
+def delete_menu_item(request, TeaMenu_id):
+    item = get_object_or_404(TeaMenu, id=TeaMenu_id)
+    item.delete()
+    return redirect(staff_page)
+
+
+def delete_reservation(request, Reservation_id):
+    reservation = get_object_or_404(Reservation, id=Reservation_id)
+    reservation.delete()
+    return redirect(staff_page)

@@ -23,6 +23,11 @@
             <button>Edit</button>
         </a>
     </td>
+    <td>
+        <a href="/delete/{{ item.id }}">
+            <button>Delete Item</button>
+        </a>
+    </td>
     </tr>
 {% endfor %}
 </table>
@@ -39,6 +44,11 @@
     <td>
         <a href="/edit_reservation/{{ reservation.id }}">
             <button>Edit</button>
+        </a>
+    </td>
+    <td>
+        <a href="/remove/{{ reservation.id }}">
+            <button>Delete Reservation</button>
         </a>
     </td>
     </tr>
