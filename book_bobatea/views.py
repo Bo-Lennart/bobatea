@@ -26,6 +26,20 @@ def add_menu_item(request):
     return render(request, '../templates/add_menu_item.html', context)
 
 
+def staff_reserve_table(request):
+    reserve_form = ReserveTableForm()
+
+    if request.method == 'POST':
+        reserve_form = ReserveTableForm(request.POST)
+        if reserve_form.is_valid():
+            reserve_form.save()
+        return redirect(staff_page)
+
+    context = {'form': reserve_form}
+
+    return render(request, '../templates/staff_reservation.html', context)
+
+
 def reserve_table(request):
     reserve_form = ReserveTableForm()
 
