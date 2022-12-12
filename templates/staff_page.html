@@ -18,6 +18,11 @@
     <td>{{item}}</td>  
     <td>{{item.quantity}}</td>  
     <td>{{item.price}} £</td>
+    <td>
+        <a href="/edit/{{ item.id }}">
+            <button>Edit</button>
+        </a>
+    </td>
     </tr>
 {% endfor %}
 </table>
@@ -31,6 +36,11 @@
     <td>Reservation made by: {{reservation.name}}</td>  
     <td>Reserved Date: {{reservation.date}}</td>  
     <td>Number of Guests: {{reservation.number_of_guests}}</td>
+    <td>
+        <a href="/edit/{{ item.id }}">
+            <button>Edit</button>
+        </a>
+    </td>
     </tr>
 {% endfor %}
 </table>
