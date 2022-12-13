@@ -11,27 +11,27 @@
 <body>
     <header>
         <nav>
-            <div>
+            <div class="navigation">
                 <ul id="nav_links">
-                    <li id="logo_link">Book Boba<a href="{% url 'menu' %}" aria-label="Go to home page">
+                    <li id="logo">Book Boba<a href="{% url 'menu' %}" aria-label="Go to home page">
                     </a></li>
                     <li class="nav_link"><a href="{% url 'reserve_table' %}" aria-label="Reserve a Table" class="active">Make Reservation</a></li>
                     <li class="nav_link"><a href="{% url 'about' %}" aria-label="Go to about page">About</a></li>
-                    <li id="match_link" class="nav_link">
+                    <li class="nav_link">
                         <a href="{% url 'contact' %}" aria-label="Contact us">Contact Us</a>
                     </li>
-                    <li>
+                    <li class="nav_link">
                         <a aria-current="page" href="{% url 'menu' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li>
+                    <li class="nav_link">
                         <a href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    <li>
+                    <li class="nav_link">
                         <a href="{% url 'staff' %}">Edit Menu & Bookings</a>
                     </li>
                     {% else %}
-                    <li>
+                    <li class="nav_link">
                         <a href="{% url 'account_login' %}">Staff Login</a>
                     </li>
                     {% endif %}
