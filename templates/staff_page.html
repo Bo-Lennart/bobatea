@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
     <title>Staff Page</title>
 </head>
 <body>
@@ -71,6 +72,7 @@
     <td>Reservation made by: {{reservation.name}}</td>  
     <td>Reserved Date: {{reservation.date}}</td>  
     <td>Number of Guests: {{reservation.number_of_guests}}</td>
+    <td>Time: {{reservation.time}}</td>
     <td>
         <a href="/edit_reservation/{{ reservation.id }}">
             <button>Edit</button>
