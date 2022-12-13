@@ -6,8 +6,15 @@ from .forms import ReserveTableForm, add_item_to_menu_form
 
 def get_menu(request):
     menu = TeaMenu.objects.all()
+    reserve_form = ReserveTableForm()
 
-    context = {'menu': menu}
+    if request.method == 'POST':
+        reserve_form = ReserveTableForm(request.POST)
+        if reserve_form.is_valid():
+            reserve_form.save()
+
+    context = {'menu': menu,
+    'form': reserve_form}
 
     return render(request, '../templates/base.html', context)
 
@@ -20,6 +27,7 @@ def staff_reserve_table(request):
         if reserve_form.is_valid():
             reserve_form.save()
         return redirect(staff_page)
+        
 
     context = {'form': reserve_form}
 

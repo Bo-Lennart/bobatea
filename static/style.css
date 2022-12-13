@@ -29,12 +29,52 @@ li {
 }
 
 #hero_img {
-    height: 550px;
+    height: 650px;
     width: 100%;
     background: url(media/boba_home_hero.jpg);
     background-size: cover;
 }
 
+#menu_booking {
+    display: flex;
+    justify-content: center;
+}
+
+#menu {
+    color: white;
+    width: 50%;
+    text-align: center;
+}
+
+#reservation {
+    color: white;
+    width: 50%;
+    margin-right: 0;
+}
+
+/* reservation form */
+
+.reservation_form, .menu {
+    padding: 3%;
+    margin-top: 4%;
+    margin-right: 10%;
+    float: right;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+}
+
+.reservation_form, input {
+    line-height: 35px;
+}
+
+.reservation_form, button {
+    padding: 10px 15px;
+    float: right;
+    transition-duration: 0.2s;
+    margin: 5% 5% 5% 0%;
+    margin-bottom: 0;
+}
 /* Footer styling */
 
 footer {

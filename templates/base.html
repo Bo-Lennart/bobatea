@@ -43,17 +43,31 @@
 
         <div>
             <div id="hero_img">
-                <p id="boba_intro">We bring asias best boba tea to Stockholm</p>
+                <div id="menu_booking">
+                    <div id="menu" class="menu">
+                        <h1>Menu</h1>
+                    {% for item in menu %}
+                       <h2>{{item}}</h2>
+                       <h4>{{item.quantity}}</h4>
+                       <h4>{{item.price}} £</h4> 
+                    {% endfor %}
+                    </div>
+                    
+                    <div id="reservation" class="reservation_form">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    
+                        <button type="submit">Submit</button>
+                    </form>
+                    </div>
+                </div>
             </div>
         </div>
 
-<h1>Boba Menu</h1>
 
-{% for item in menu %}
-   <h2>{{item}}</h2>
-   <h4>{{item.quantity}}</h4>
-   <h4>{{item.price}} £</h4> 
-{% endfor %}
+
+
 
 <footer>
     <div id="social_media_links">
