@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django import forms
+from datetime import date
 
 
 # Create your models here.
@@ -31,7 +32,7 @@ class Reservation(models.Model):
     email = models.EmailField()
     phone = models.IntegerField()
     number_of_guests = models.IntegerField()
-    date = models.DateField()
+    date = models.DateField(default=date.today())
     time = models.TimeField()
 
     def __str__(self):

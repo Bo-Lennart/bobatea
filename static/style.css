@@ -20,6 +20,14 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: hotpink;
+}
+
 li {
     display: inline;
     width: 20%;
@@ -59,8 +67,21 @@ li {
     margin-right: 0;
 }
 
+input[id="id_date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
 /* reservation form */
-.reservation_form, p {
+.reservation_form p {
     margin-top: 5px;
 } 
 
@@ -77,15 +98,24 @@ li {
 .reservation_form, input {
     float: right;
     line-height: 30px;
-    border: solid black 1px;
 }
 
-.reservation_form, button {
+.reservation_form button {
     padding: 10px 15px;
     float: right;
     transition-duration: 0.2s;
     margin: 5% 5% 5% 0%;
     margin-bottom: 0;
+    background-color: black;
+    color: white;
+    border: solid #FFFFFF 0.1px;
+    font-family: 'Lilita One', cursive;
+    font-size: 20px;
+}
+
+.reservation_form button:hover {
+    background-color: hotpink;
+
 }
 /* Footer styling */
 

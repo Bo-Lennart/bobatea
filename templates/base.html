@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="/static/style.css">
     <title>Home Page</title>
 </head>
+
 <body>
     <body>
         <header>
             <nav>
                 <div>
                     <ul id="nav_links">
-                        <li id="logo">Book Boba<a href="{% url 'menu' %}" aria-label="Go to home page">
-                        </a></li>
+                        <li><a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Book Boba</a></li>
                         <li class="nav_link"><a href="{% url 'reserve_table' %}" aria-label="Reserve a Table" class="active">Make Reservation</a></li>
                         <li class="nav_link"><a href="{% url 'about' %}" aria-label="Go to about page">About</a></li>
                         <li id="match_link" class="nav_link">
@@ -56,7 +56,6 @@
                     <form action="" method="POST">
                         {% csrf_token %}
                         {{ form.as_p }}
-                    
                         <button type="submit">Submit</button>
                     </form>
                     </div>
