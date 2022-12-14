@@ -41,9 +41,16 @@ li {
 }
 
 #menu {
+    clear: both;
+    display: inline-block;
     color: white;
     width: 50%;
-    text-align: center;
+    text-align: left;
+    font-size: 25px;
+}
+
+#menu_price {
+    float: right;
 }
 
 #reservation {

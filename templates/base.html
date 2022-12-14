@@ -47,9 +47,7 @@
                     <div id="menu" class="menu">
                         <h1>Menu</h1>
                     {% for item in menu %}
-                       <h2>{{item}}</h2>
-                       <h4>{{item.quantity}}</h4>
-                       <h4>{{item.price}} £</h4> 
+                       <p id="menu_item">{{item}} <b id="menu_price">{{item.price}} £</b></p>
                     {% endfor %}
                     </div>
                     
