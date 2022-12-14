@@ -7,6 +7,9 @@ class ReserveTableForm(forms.ModelForm):
     class Meta:
         model = Reservation
         fields = '__all__'
+        widgets = {
+            'date': forms.DateInput(attrs={'type':'date'}),
+        }
 
 
 class add_item_to_menu_form(forms.ModelForm):

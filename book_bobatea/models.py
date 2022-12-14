@@ -32,7 +32,7 @@ class Reservation(models.Model):
     email = models.EmailField()
     phone = models.IntegerField()
     number_of_guests = models.IntegerField()
-    date = models.DateField(default=date.today())
+    date = models.DateField()
     time = models.TimeField()
 
     def __str__(self):
