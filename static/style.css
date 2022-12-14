@@ -53,6 +53,9 @@ li {
 }
 
 /* reservation form */
+.reservation_form, p {
+    margin-top: 5px;
+} 
 
 .reservation_form, .menu {
     padding: 3%;
@@ -65,7 +68,9 @@ li {
 }
 
 .reservation_form, input {
-    line-height: 35px;
+    float: right;
+    line-height: 30px;
+    border: solid black 1px;
 }
 
 .reservation_form, button {
