@@ -8,7 +8,58 @@
 }
 
 body {
+    position: relative;
     font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: beige;
+}
+
+.container {
+    width: 1600px;
+    margin: auto;
+}
+
+.subcontainer {
+    width: 85%;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: black;
+}
+
+#home {
+    margin-top: 70px;
 }
 
 #logo {
@@ -77,19 +128,6 @@ a {
     margin-right: 0;
 }
 
-input[id="id_date"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
-}
-
 /* reservation form */
 .reservation_form p {
     margin-top: 5px;
@@ -147,4 +185,22 @@ footer ul li {
 
 #social_media_links {
     padding: 5% 0;
+}
+
+
+
+
+@media(max-width:1600px){
+    .container{
+        width: 100%;
+    }
+}
+
+
+@media(max-width: 1024px){
+    .hamburger{
+        display: block;
+    }
+
+
 }

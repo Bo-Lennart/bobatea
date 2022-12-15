@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,10 @@
 </head>
 
 <body>
+
     <body>
         <header>
-            <nav>
+            <nav class="navbar">
                 <div>
                     <ul id="nav_links">
                         <li>
@@ -49,42 +51,42 @@
                 <div id="menu_booking">
                     <div id="menu" class="menu">
                         <h1>Menu</h1>
-                    {% for item in menu %}
-                       <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
-                       <p><span id="menu_discription">{{item.description}}</span></p>
-                    {% endfor %}
+                        {% for item in menu %}
+                        <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
+                        <p><span id="menu_discription">{{item.description}}</span></p>
+                        {% endfor %}
                     </div>
-                    
+
                     <div id="reservation" class="reservation_form">
                         <h1>Reserve a Table:</h1>
-                    <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" id="submit_reservation">Submit</button>
-                    </form>
+                        <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" id="submit_reservation">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
-<footer>
-    <div id="social_media_links">
-        <ul>
-            <li class="social_icon"><a href="https://www.linkedin.com/in/bobo/" target="_blank"
-                    aria-label="visit Linkedin page"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li class="social_icon"><a href="https://github.com/Bo-Lennart" target="_blank"
-                    aria-label="visit Github page">
-                    <i class="fa-brands fa-github"></i></a></li>
-            <li class="social_icon"><a href="https://www.facebook.com/" target="_blank"
-                    aria-label="visit Facebook page">
-                    <i class="fa-brands fa-square-facebook"></i></a>
-            </li>
-        </ul>
-    </div>
-</footer>
+        <footer>
+            <div id="social_media_links">
+                <ul>
+                    <li class="social_icon"><a href="https://www.linkedin.com/in/bobo/" target="_blank"
+                            aria-label="visit Linkedin page"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="social_icon"><a href="https://github.com/Bo-Lennart" target="_blank"
+                            aria-label="visit Github page">
+                            <i class="fa-brands fa-github"></i></a></li>
+                    <li class="social_icon"><a href="https://www.facebook.com/" target="_blank"
+                            aria-label="visit Facebook page">
+                            <i class="fa-brands fa-square-facebook"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 
-<!-- Import fontawesome icons via script tag -->
-<script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
-</body>
+        <!-- Import fontawesome icons via script tag -->
+        <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
+    </body>
+
 </html>
-
