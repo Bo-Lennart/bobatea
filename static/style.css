@@ -58,6 +58,10 @@ li {
     font-size: 25px;
 }
 
+#id_date: {
+    width: 20px;
+}
+
 #menu_price {
     float: right;
 }
