@@ -15,14 +15,17 @@
             <nav>
                 <div>
                     <ul id="nav_links">
-                        <li><a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Book Boba</a></li>
-                        <li class="nav_link"><a href="{% url 'reserve_table' %}" aria-label="Reserve a Table" class="active">Make Reservation</a></li>
-                        <li class="nav_link"><a href="{% url 'about' %}" aria-label="Go to about page">About</a></li>
-                        <li id="match_link" class="nav_link">
-                            <a href="{% url 'contact' %}" aria-label="Contact us">Contact Us</a>
+                        <li>
+                            <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Book Boba</a>
                         </li>
                         <li>
                             <a aria-current="page" href="{% url 'menu' %}">Home</a>
+                        </li>
+                        <li class="nav_link">
+                            <a href="{% url 'about' %}" aria-label="Go to about page">About</a>
+                        </li>
+                        <li id="match_link" class="nav_link">
+                            <a href="{% url 'contact' %}" aria-label="Contact us">Contact Us</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li>
@@ -53,19 +56,20 @@
                     
                     <div id="reservation" class="reservation_form">
                         <h1>Reserve a Table:</h1>
-                    <form action="" method="POST">
+                    <form action="" method="POST" id="reservation_form">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <button type="submit">Submit</button>
+                        <button type="submit" id="submit_reservation">Submit</button>
                     </form>
+
+                    <div id="thank_you" style="display: none;">
+                        <p>Thank you! We've received your reservation.</p>
+                        <button type="submit" onClick="window.location.reload()">Close</button>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
 
 <footer>
     <div id="social_media_links">
@@ -85,6 +89,7 @@
 
 <!-- Import fontawesome icons via script tag -->
 <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
+<script src="/static/app.js"></script>
 </body>
 </html>
 
