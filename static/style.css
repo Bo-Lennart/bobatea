@@ -165,7 +165,6 @@ a {
 
 .reservation_form button:hover {
     background-color: hotpink;
-
 }
 /* Footer styling */
 
@@ -173,6 +172,10 @@ footer {
     height: 40px;
     display: inline;
     text-align: center;
+}
+
+footer a {
+    color: rgb(0, 0, 0);
 }
 
 footer ul li {
