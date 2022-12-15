@@ -14,60 +14,68 @@
 
     <body>
         <header>
-            <nav class="navbar">
-                <div>
-                    <ul id="nav_links">
-                        <li>
-                            <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Book Boba</a>
-                        </li>
-                        <li>
-                            <a aria-current="page" href="{% url 'menu' %}">Home</a>
-                        </li>
-                        <li class="nav_link">
-                            <a href="{% url 'about' %}" aria-label="Go to about page">About</a>
-                        </li>
-                        <li id="match_link" class="nav_link">
-                            <a href="{% url 'contact' %}" aria-label="Contact us">Contact Us</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li>
-                            <a href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'staff' %}">Edit Menu & Bookings</a>
-                        </li>
-                        {% else %}
-                        <li>
-                            <a href="{% url 'account_login' %}">Staff Login</a>
-                        </li>
-                        {% endif %}
-                    </ul>
+            <div class="container">
+                <div class="subcontainer">
+                    <nav class="navbar">
+                        <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Boba</a>
+                        
+                        <ul class="nav_menu">
+                            <li class="nav_item">
+                                <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="{% url 'about' %}" aria-label="Go to about page" class="nav-link">About</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="{% url 'contact' %}" aria-label="Contact us" class="nav-link">Contact Us</a>
+                            </li>
+                            {% if user.is_authenticated %}
+                            <li class="nav_item">
+                                <a href="{% url 'account_logout' %}" class="nav-link">Logout</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'staff' %}" class="nav-link">Edit Menu & Bookings</a>
+                            </li>
+                            {% else %}
+                            <li class="nav_item">
+                                <a href="{% url 'account_login' %}" class="nav-link">Staff Login</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
+            </div>
         </header>
+<div id="home">
 
-        <div>
-            <div id="hero_img">
-                <div id="menu_booking">
-                    <div id="menu" class="menu">
-                        <h1>Menu</h1>
-                        {% for item in menu %}
-                        <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
-                        <p><span id="menu_discription">{{item.description}}</span></p>
-                        {% endfor %}
-                    </div>
+    <div>
+        <div id="hero_img">
+            <div id="menu_booking">
+                <div id="menu" class="menu">
+                    <h1>Menu</h1>
+                    {% for item in menu %}
+                    <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
+                    <p><span id="menu_discription">{{item.description}}</span></p>
+                    {% endfor %}
+                </div>
 
-                    <div id="reservation" class="reservation_form">
-                        <h1>Reserve a Table:</h1>
-                        <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" id="submit_reservation">Submit</button>
-                        </form>
-                    </div>
+                <div id="reservation" class="reservation_form">
+                    <h1>Reserve a Table:</h1>
+                    <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" id="submit_reservation">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
         <footer>
             <div id="social_media_links">
@@ -87,6 +95,7 @@
 
         <!-- Import fontawesome icons via script tag -->
         <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
+        <script src="/static/app.js"></script>
     </body>
 
 </html>
