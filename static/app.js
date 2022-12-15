@@ -1,2 +1,2 @@
-const timeControl = document.querySelector('input[type="time"]');
-timeControl.value = '15:30';
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".hamburger");
