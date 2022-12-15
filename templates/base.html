@@ -51,6 +51,7 @@
                         <h1>Menu</h1>
                     {% for item in menu %}
                        <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
+                       <p><span id="menu_discription">{{item.description}}</span></p>
                     {% endfor %}
                     </div>
                     
