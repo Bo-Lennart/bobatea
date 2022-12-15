@@ -9,7 +9,7 @@ class ReserveTableForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'date': forms.DateInput(attrs={'placeholder': 'yyyy-mm-dd'}),
-            'time': forms.TimeInput(attrs={'type':'time'}),
+            'time': forms.TimeInput(attrs={'type':'time', 'min': '12:00'}),
         }
 
 

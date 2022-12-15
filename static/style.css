@@ -39,6 +39,10 @@ li {
     background-size: cover;
 }
 
+a {
+    color: black;
+}
+
 #menu_booking {
     display: flex;
     justify-content: center;
@@ -56,6 +60,7 @@ li {
 
 #menu_discription {
     font-size: 15px;
+    padding-left: 10%;
 }
 
 #id_date: {
