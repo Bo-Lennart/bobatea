@@ -56,16 +56,11 @@
                     
                     <div id="reservation" class="reservation_form">
                         <h1>Reserve a Table:</h1>
-                    <form action="" method="POST" id="reservation_form">
+                    <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit" id="submit_reservation">Submit</button>
                     </form>
-
-                    <div id="thank_you" style="display: none;">
-                        <p>Thank you! We've received your reservation.</p>
-                        <button type="submit" onClick="window.location.reload()">Close</button>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +84,6 @@
 
 <!-- Import fontawesome icons via script tag -->
 <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
-<script src="/static/app.js"></script>
 </body>
 </html>
 

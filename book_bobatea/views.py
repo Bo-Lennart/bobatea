@@ -129,3 +129,8 @@ def remove_reservation(request, Reservation_id):
     reservation = get_object_or_404(Reservation, id=Reservation_id)
     reservation.delete()
     return redirect(staff_page)
+
+
+def reservation_confirmation(request):
+
+    return render(request, '../templates/reservation_confirmation.html', )

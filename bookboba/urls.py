@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from book_bobatea.views import get_menu, reserve_table, about, contact, staff_page, add_menu_item, staff_reserve_table, edit_menu, edit_reservation, delete_menu_item, remove_reservation
+from book_bobatea.views import get_menu, reserve_table, about, contact, staff_page, add_menu_item, staff_reserve_table, edit_menu, edit_reservation, delete_menu_item, remove_reservation, reservation_confirmation
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +31,5 @@ urlpatterns = [
     path('edit_reservation/<Reservation_id>/', edit_reservation, name='edit_reservation'),
     path('delete/<TeaMenu_id>/', delete_menu_item, name='delete_menu_item'),
     path('remove/<Reservation_id>/', remove_reservation, name='remove_reservation'),
+    path('reservation_confirmation/', reservation_confirmation, name='confirmation_page'),
 ]
