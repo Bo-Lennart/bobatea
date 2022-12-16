@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import TeaMenu, AboutUs, StaffCrew, Reservation
-from .forms import ReserveTableForm, add_item_to_menu_form
+from .forms import ReserveTableForm, add_item_to_menu_form, CancelReservationForm
 
 # Create your views here.
 
@@ -47,6 +47,7 @@ def reserve_table(request):
     return render(request, '../templates/reservation.html', context)
 
 
+
 def about(request):
     about = AboutUs.objects.last()
     staff_crew = StaffCrew.objects.last()
@@ -60,8 +61,16 @@ def about(request):
 
 
 def contact(request):
+    cancel_form = CancelReservationForm()
 
-    return render(request, '../templates/contact.html', )
+    if request.method == 'POST':
+        cancel_form = CancelReservationForm(request.POST)
+        if cancel_form.is_valid():
+            cancel_form.save()
+
+    context = {'form': cancel_form}
+
+    return render(request, '../templates/contact.html', context)
 
 
 def staff_page(request):

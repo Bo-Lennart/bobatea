@@ -20,8 +20,12 @@ class add_item_to_menu_form(forms.ModelForm):
         fields = '__all__'
 
 
-class CancelReservation():
-    
+class CancelReservationForm(forms.ModelForm):
+
     class Meta:
-        model = Reservation
+        model = CancelReservation
         fields = '__all__'
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd', 'min':'', 'max':''}),
+            'time': forms.TimeInput(attrs={'type':'time', 'min': '12:00', 'max': '21:00'}),
+        }

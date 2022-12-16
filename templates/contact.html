@@ -52,6 +52,12 @@
 
 If you need to cancel or make changes to your booking, please contact us via phone:
 
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Submit</button>
+
 </form>
 
 <footer>
