@@ -12,7 +12,16 @@ document.querySelectorAll('.nav-link').forEach( n=> n.
         navMenu.classList.remove("active");
     }))
 
-    
+
 function deleteReservation() {
     alert("Reservation has been deleted");
 }
+
+
+
+$(document).ready(function() {
+          
+    $(function() {
+        $( "#id_date" ).datepicker();
+    });
+})
