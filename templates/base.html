@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
 
-    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script>
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+        rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <title>Home Page</title>
 </head>
@@ -23,7 +24,7 @@
                 <div class="subcontainer">
                     <nav class="navbar">
                         <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Boba</a>
-                        
+
                         <ul class="nav_menu">
                             <li class="nav_item">
                                 <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
@@ -56,31 +57,31 @@
                 </div>
             </div>
         </header>
-<div id="home">
+        <div id="home">
 
-    <div>
-        <div id="hero_img">
-            <div id="menu_booking">
-                <div id="menu" class="menu">
-                    <h1>Menu</h1>
-                    {% for item in menu %}
-                    <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
-                    <p><span id="menu_discription">{{item.description}}</span></p>
-                    {% endfor %}
-                </div>
+            <div>
+                <div id="hero_img">
+                    <div id="menu_booking">
+                        <div id="menu" class="menu">
+                            <h1>Menu</h1>
+                            {% for item in menu %}
+                            <p id="menu_item">{{item}} <span id="menu_price">{{item.price}} £</span></p>
+                            <p><span id="menu_discription">{{item.description}}</span></p>
+                            {% endfor %}
+                        </div>
 
-                <div id="reservation" class="reservation_form">
-                    <h1>Reserve a Table:</h1>
-                    <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" id="submit_reservation">Submit</button>
-                    </form>
+                        <div id="reservation" class="reservation_form">
+                            <h1>Reserve a Table:</h1>
+                            <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit" id="submit_reservation">Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
         <footer>
             <div id="social_media_links">

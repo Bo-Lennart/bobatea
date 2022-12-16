@@ -91,6 +91,13 @@ li {
     background-size: cover;
 }
 
+#hero_img_contact {
+    height: 650px;
+    width: 100%;
+    background: url(media/contact_boba_header.jpg);
+    background-size: cover;
+}
+
 a {
     color: rgb(255, 255, 255);
     font-family: 'Lilita One', cursive;

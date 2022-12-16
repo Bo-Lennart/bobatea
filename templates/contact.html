@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="/static/style.css">
     <title>Contact Us</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="subcontainer">
                 <nav class="navbar">
                     <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Boba</a>
-                    
+
                     <ul class="nav_menu">
                         <li class="nav_item">
                             <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
@@ -49,55 +51,53 @@
     </header>
 
 
-<div id="home">
+    <div id="home">
 
-    <div>
-        <div id="hero_img">
-            <div id="menu_booking">
+        <div>
+            <div id="hero_img_contact">
+                <div id="menu_booking">
 
-                <div id="menu" class="menu">
-                    <h1>Contact Us</h1>
-                
-                    <p>If you have any questions or need to adjust a booking, please make a call. 
-                        <br>If you need to cancel a booking then you just have to fill out the form below:
-                    </p>
-                    
-                </div>
+                    <div id="menu" class="menu">
+                        <h1>Contact Us</h1>
 
-                <div id="reservation" class="reservation_form">
-                    <form action="" method="POST">
-                        <h1>Cancelation Form:</h1>
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                    
-                        <button type="submit">Submit</button>
-                    
-                    </form>
+                        <p>If you have any questions or need to adjust a booking, please make a call.
+                            <br>If you need to cancel a booking then you just have to fill out the form below:
+                        </p>
+
+                    </div>
+
+                    <div id="reservation" class="reservation_form">
+                        <form action="" method="POST">
+                            <h1>Cancelation Form:</h1>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<footer>
-    <div id="social_media_links">
-        <ul>
-            <li class="social_icon"><a href="https://www.linkedin.com/in/bobo/" target="_blank"
-                    aria-label="visit Linkedin page"><i class="fa-brands fa-linkedin"></i></a></li>
-            <li class="social_icon"><a href="https://github.com/Bo-Lennart" target="_blank"
-                    aria-label="visit Github page">
-                    <i class="fa-brands fa-github"></i></a></li>
-            <li class="social_icon"><a href="https://www.facebook.com/" target="_blank"
-                    aria-label="visit Facebook page">
-                    <i class="fa-brands fa-square-facebook"></i></a>
-            </li>
-        </ul>
-    </div>
-</footer>
+    <footer>
+        <div id="social_media_links">
+            <ul>
+                <li class="social_icon"><a href="https://www.linkedin.com/in/bobo/" target="_blank"
+                        aria-label="visit Linkedin page"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li class="social_icon"><a href="https://github.com/Bo-Lennart" target="_blank"
+                        aria-label="visit Github page">
+                        <i class="fa-brands fa-github"></i></a></li>
+                <li class="social_icon"><a href="https://www.facebook.com/" target="_blank"
+                        aria-label="visit Facebook page">
+                        <i class="fa-brands fa-square-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
-<!-- Import fontawesome icons via script tag -->
-<script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
-<script src="/static/app.js"></script>
+    <!-- Import fontawesome icons via script tag -->
+    <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
+    <script src="/static/app.js"></script>
 </body>
-</html>
 
+</html>
