@@ -98,6 +98,13 @@ li {
     background-size: cover;
 }
 
+#about_us_hero_img {
+    height: 750px;
+    width: 100%;
+    background: url(media/boba_history_header.jpg);
+    background-size: cover;
+}
+
 a {
     color: rgb(255, 255, 255);
     font-family: 'Lilita One', cursive;
