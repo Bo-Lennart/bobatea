@@ -1,6 +1,12 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav_menu");
 
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+var todaysDate = new Date().getDate
+
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle("active")
     navMenu.classList.toggle("active")
@@ -19,9 +25,20 @@ function deleteReservation() {
 
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
           
-    $(function() {
-        $( "#id_date" ).datepicker();
-    });
-})
+//     $(function() {
+//         $( "#id_date" ).datepicker();
+//     });
+// })
+
+
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("id_date").setAttribute("min", today);
