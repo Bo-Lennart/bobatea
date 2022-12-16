@@ -63,3 +63,12 @@ class StaffCrew(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class CancelReservation(models.Model):
+    name = models.CharField(max_length=50)
+    date = models.DateField()
+    time = models.TimeField()
+
+    def __str__(self):
+        return self.name
