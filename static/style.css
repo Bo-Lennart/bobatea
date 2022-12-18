@@ -141,7 +141,6 @@ a {
 #reservation {
     color: white;
     width: 50%;
-    margin-right: 0;
 }
 
 /* reservation form */
@@ -263,4 +262,12 @@ footer ul li {
     .nav_menu.active{
         left: 0;
     }
+}
+
+@media(max-width: 910px) {
+    #menu_booking {
+        display: inline-block;
+    }
+
+    
 }
