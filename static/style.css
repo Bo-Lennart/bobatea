@@ -115,6 +115,10 @@ a {
     justify-content: center;
 }
 
+#reservation {
+    float: right;
+}
+
 
 #menu {
     clear: both;
@@ -160,7 +164,7 @@ input {
 .reservation_form, .menu {
     padding: 3%;
     margin-top: 4%;
-    margin-right: 10%;
+    margin-right: 1%;
     float: right;
     color: #FFFFFF;
     background-color: rgba(0, 0, 0, 0.3);
@@ -265,9 +269,48 @@ footer ul li {
 }
 
 @media(max-width: 910px) {
-    #menu_booking {
-        display: inline-block;
+
+    #hero_img {
+        height: 950px;
     }
 
-    
+    #menu_booking {
+        display: inline-block;
+        width: 530px;
+        
+    }
+
+    #reservation {
+        float: none;
+    }
+
+    .reservation_form {
+        max-width: 219px;
+        height: 450px;
+        float: none;
+    }
+
+    .reservation_form input {
+        width: 219px;
+    }
+
+    .menu {
+        float: none;
+        max-width: 219px;
+    }
+
+    .menu h1 {
+        font-size: 10px;
+    }
+    .menu p {
+        font-size: 10px;
+    }
+
+    #menu_discription {
+        font-size: 10px;
+    }
+
+    #reservation h1 {
+        font-size: 15px;
+    }
 }
