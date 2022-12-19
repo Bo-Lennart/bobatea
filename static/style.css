@@ -63,6 +63,10 @@ header{
     margin-top: 70px;
 }
 
+#staff_home {
+    margin-top: 70px;
+}
+
 #logo {
     font-family: 'Lilita One', cursive;
     font-size: 26px;
@@ -224,17 +228,22 @@ footer ul li {
     padding: 5% 0;
 }
 
-#staff_page_menu {
+#staff_page_table {
     width: 100%;
 }
 
-#staff_page_menu td {
+#staff_page_table td {
     width: 20%;
     margin: 10%;
 }
 
+#staff_page_reservation_table td {
+    width: 10%;
+}
+
 #staff_menu_name {
     text-align: left;
+    font-family: 'Lilita One', cursive;
 }
 
 #staff_menu_quantity {
@@ -245,18 +254,19 @@ footer ul li {
     text-align: end;
 }
 
-#staff_page_menu button {
+#staff_home button {
     margin-left: 10%;
-    width: 100px;
+    width: 60px;
     height: 30px;
     border-radius: 8%;
     background-color: black;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lilita One', cursive;
 }
 
-#quantity_nr {
-    text-align: end;
+#staff_home button:hover {
+    background-color: pink;
+    color: black;
 }
 
 

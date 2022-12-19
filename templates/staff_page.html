@@ -50,14 +50,14 @@
             </div>
         </div>
     </header>
-    <div id="home">
+    <div id="staff_home">
 
         <h1>STAFF PAGE</h1>
 
         {% if user.is_authenticated %}
         <h1>Edit Menu:</h1>
         {% for item in menu %}
-        <table id="staff_page_menu">
+        <table id="staff_page_table">
             <tr>
                 <td id="staff_menu_name">{{item}}</td>
                 <td id="staff_menu_quantity">{{item.quantity}}</td>
@@ -69,7 +69,7 @@
                 </td>
                 <td>
                     <a href="/delete/{{ item.id }}">
-                        <button>Delete Item</button>
+                        <button>Delete</button>
                     </a>
                 </td>
             </tr>
@@ -80,13 +80,13 @@
         <h1>Reservations:</h1>
 
         {% for reservation in reservations %}
-        <table id="staff_page_reservations">
+        <table id="staff_page_reservation_table">
             <tr>
-                <td>Reservation made by: <br>
+                <td>Name: <br>
                     {{reservation.name}}</td>
-                <td>Reserved Date: <br>
+                <td>Date: <br>
                     {{reservation.date}}</td>
-                <td>Number of Guests: <br>
+                <td>Guests: <br>
                     {{reservation.number_of_guests}}</td>
                 <td>Time: <br>
                     {{reservation.time}}</td>
@@ -97,19 +97,16 @@
                 </td>
                 <td>
                     <a href="/remove/{{ reservation.id }}">
-                        <button onclick="deleteReservation()">Delete Reservation</button>
+                        <button onclick="deleteReservation()">Delete</button>
                     </a>
                 </td>
             </tr>
             {% endfor %}
         </table>
-        <a href="{% url 'staff_reserve_table' %}">Make Reservation
-            <button>Make Reservation</button>
-        </a>
 
         <h1>Canceled Reservations:</h1>
         {% for cancelation in cancelations %}
-        <table id="cancelation_requests">
+        <table id="staff_page_reservation_table">
             <tr>
                 <td>Reservation made by: <br>
                     {{cancelation.name}}</td>
