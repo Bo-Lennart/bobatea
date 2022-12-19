@@ -68,6 +68,11 @@ header{
     font-size: 50px;
 }
 
+#id_comment {
+    width: 350px;
+    font-family: 'Montserrat', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -281,23 +286,6 @@ footer ul li {
         padding-top: 7%;
     }
 
-    #reservation {
-        float: none;
-        width: 219px;
-        padding: 4%;
-    }
-
-    .reservation_form {
-        max-width: 219px;
-        height: 450px;
-        float: none;
-        text-align:center;
-    }
-
-    .reservation_form input {
-        width: 219px;
-    }
-
     .menu {
         float: none;
     }
@@ -318,7 +306,34 @@ footer ul li {
         font-size: 12px;
     }
 
+    #reservation {
+        float: none;
+        width: 219px;
+        padding: 4%;
+    }
+
+    .reservation_form {
+        max-width: 219px;
+        height: 450px;
+        float: none;
+        text-align:center;
+    }
+
+    .reservation_form input {
+        width: 219px;
+    }
+
+
     #reservation h1 {
         font-size: 24px;
+    }
+
+    #id_comment {
+        width: 219px;
+        height: 100px;
+    }
+
+    #hero_img_contact {
+        height: 750px;
     }
 }
