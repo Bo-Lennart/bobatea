@@ -72,7 +72,7 @@
 
                         <div id="reservation" class="reservation_form">
                             <h1>Reserve a Table:</h1>
-                            <form action="{% url 'confirmation_page' %}" method="POST" id="reservation_form">
+                            <form action="" method="POST" id="reservation_form">
                                 {% csrf_token %}
                                 {{ form.as_p }}
                                 <button type="submit" id="submit_reservation">Submit</button>
