@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import TeaMenu, AboutUs, StaffCrew, Reservation, CancelReservation
+from .models import TeaMenu, AboutUs, StaffCrew, Reservation
 from .forms import ReserveTableForm, add_item_to_menu_form, CancelReservationForm
 
 # Create your views here.
@@ -76,11 +76,9 @@ def contact(request):
 def staff_page(request):
     menu = TeaMenu.objects.all()
     reservations = Reservation.objects.all()
-    cancelations = CancelReservation.objects.all()
 
     context = {'menu': menu,
     'reservations': reservations,
-    'cancelations': cancelations
     }
 
     return render(request, '../templates/staff_page.html', context)

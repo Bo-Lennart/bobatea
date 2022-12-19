@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,14 @@
     <link rel="stylesheet" href="/static/style.css">
     <title>Staff Page</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="subcontainer">
                 <nav class="navbar">
                     <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Be-Be-Boba</a>
-                    
+
                     <ul class="nav_menu">
                         <li class="nav_item">
                             <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
@@ -47,88 +49,67 @@
             </div>
         </div>
     </header>
-    
-    <h1>STAFF PAGE</h1>
+    <div id="home">
 
-    {% if user.is_authenticated %}
-<h1>Edit Menu:</h1>
-{% for item in menu %}
-<table>
-    <tr>
-    <td>{{item}}</td>  
-    <td>{{item.quantity}}</td>  
-    <td>{{item.price}} £</td>
-    <td>
-        <a href="/edit/{{ item.id }}">
-            <button>Edit</button>
-        </a>
-    </td>
-    <td>
-        <a href="/delete/{{ item.id }}">
-            <button>Delete Item</button>
-        </a>
-    </td>
-    </tr>
-{% endfor %}
-</table>
-<a href="{% url 'add_menu_item' %}">Add item to menu</a>
+        <h1>STAFF PAGE</h1>
 
-<h1>Edit Reservations:</h1>
+        {% if user.is_authenticated %}
+        <h1>Edit Menu:</h1>
+        {% for item in menu %}
+        <table>
+            <tr>
+                <td>{{item}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price}} £</td>
+                <td>
+                    <a href="/edit/{{ item.id }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/delete/{{ item.id }}">
+                        <button>Delete Item</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url 'add_menu_item' %}">Add item to menu</a>
 
-{% for reservation in reservations %}
-   <table>
-    <tr>
-    <td>Reservation made by: <br> 
-        {{reservation.name}}</td>  
-    <td>Reserved Date: <br>
-        {{reservation.date}}</td>  
-    <td>Number of Guests: <br>
-        {{reservation.number_of_guests}}</td>
-    <td>Time: <br>
-        {{reservation.time}}</td>
-    <td>
-        <a href="/edit_reservation/{{ reservation.id }}">
-            <button>Edit</button>
-        </a>
-    </td>
-    <td>
-        <a href="/remove/{{ reservation.id }}">
-            <button onclick="deleteReservation()">Delete Reservation</button>
-        </a>
-    </td>
-    </tr>
-{% endfor %}
-</table>
-<a href="{% url 'staff_reserve_table' %}">Make Reservation</a>
+        <h1>Edit Reservations:</h1>
 
-<h1>Cancelations:</h1>
-
-   <table>
-    <tr>
-    <td>Reservation made by: <br> 
-        {{canceletion.name}}</td>  
-    <td>Reserved Date: <br>
-        {{canceletion.date}}</td>  
-    <td>Time: <br>
-        {{canceletion.time}}</td>
-    <td>Number of Guests: <br>
-        {{canceletion.comment}}
-    </td>
-    <td>
-        <a href="/edit_reservation/{{ reservation.id }}">
-            <button>Edit</button>
+        {% for reservation in reservations %}
+        <table>
+            <tr>
+                <td>Reservation made by: <br>
+                    {{reservation.name}}</td>
+                <td>Reserved Date: <br>
+                    {{reservation.date}}</td>
+                <td>Number of Guests: <br>
+                    {{reservation.number_of_guests}}</td>
+                <td>Time: <br>
+                    {{reservation.time}}</td>
+                <td>
+                    <a href="/edit_reservation/{{ reservation.id }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/remove/{{ reservation.id }}">
+                        <button onclick="deleteReservation()">Delete Reservation</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url 'staff_reserve_table' %}">Make Reservation
+            <button>Make Reservation</button>
         </a>
-    </td>
-    <td>
-        <a href="/remove/{{ reservation.id }}">
-            <button onclick="deleteReservation()">Delete Reservation</button>
-        </a>
-    </td>
-    </tr>
-</table>
-{% endif %}
+        {% endif %}
 
-<script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
-<script src="/static/app.js"></script>
+    </div>
+    <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
+    <script src="/static/app.js"></script>
 </body>
+
 </html>
