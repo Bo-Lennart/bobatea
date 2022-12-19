@@ -48,9 +48,10 @@
         </div>
     </header>
 <div id="home">
-    <h1>Add Menu Item:</h1>
+    <div id="table_container">
+        <h1>Add Menu Item:</h1>
     {% if user.is_authenticated %}
-    <form method="POST" action="">
+    <form method="POST" action="" id="edit_menu_form">
         {% csrf_token %}
         {{ add_item.as_p }}
             <p>
@@ -59,6 +60,7 @@
         </div>
         {% endif %}
     </form>
+    </div>
 </div>
 <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
 <script src="/static/app.js"></script>
