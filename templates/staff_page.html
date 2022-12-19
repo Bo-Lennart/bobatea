@@ -76,7 +76,7 @@
         </table>
         <a href="{% url 'add_menu_item' %}">Add item to menu</a>
 
-        <h1>Edit Reservations:</h1>
+        <h1>Reservations:</h1>
 
         {% for reservation in reservations %}
         <table>
@@ -106,6 +106,7 @@
             <button>Make Reservation</button>
         </a>
 
+        <h1>Canceled Reservations:</h1>
         {% for cancelation in cancelations %}
         <table>
             <tr>
