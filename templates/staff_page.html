@@ -56,7 +56,7 @@
         {% if user.is_authenticated %}
         <h1>Edit Menu:</h1>
         {% for item in menu %}
-        <table>
+        <table id="staff_page_menu">
             <tr>
                 <td>{{item}}</td>
                 <td>{{item.quantity}}</td>
@@ -79,7 +79,7 @@
         <h1>Reservations:</h1>
 
         {% for reservation in reservations %}
-        <table>
+        <table id="staff_page_reservations">
             <tr>
                 <td>Reservation made by: <br>
                     {{reservation.name}}</td>
@@ -108,7 +108,7 @@
 
         <h1>Canceled Reservations:</h1>
         {% for cancelation in cancelations %}
-        <table>
+        <table id="cancelation_requests">
             <tr>
                 <td>Reservation made by: <br>
                     {{cancelation.name}}</td>
