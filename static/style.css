@@ -109,14 +109,12 @@ li {
 #hero_img_contact {
     height: 650px;
     width: 100%;
-    background: url(media/contact_boba_header.jpg);
     background-size: cover;
 }
 
 #about_us_hero_img {
     height: 450px;
     width: 100%;
-    background: url(media/boba_history_header.jpg);
     background-size: cover;
 }
 
@@ -300,7 +298,7 @@ footer ul li {
 
 #login_form {
     width: 220px;
-    height: 220px;
+    height: 321px;
     border: solid 1px black;
     text-align: center;
 }
