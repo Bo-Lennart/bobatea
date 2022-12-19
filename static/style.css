@@ -271,23 +271,27 @@ footer ul li {
 @media(max-width: 910px) {
 
     #hero_img {
-        height: 950px;
+        height: 770px;
     }
 
     #menu_booking {
-        display: inline-block;
-        width: 530px;
-        
+        display: inline-block;  
+        width: 100%;    
+        display: grid;  
+        padding-top: 7%;
     }
 
     #reservation {
         float: none;
+        width: 219px;
+        padding: 4%;
     }
 
     .reservation_form {
         max-width: 219px;
         height: 450px;
         float: none;
+        text-align:center;
     }
 
     .reservation_form input {
@@ -296,21 +300,25 @@ footer ul li {
 
     .menu {
         float: none;
-        max-width: 219px;
+    }
+    
+    #menu {
+        width: 219px;
+        padding: 4%;
     }
 
     .menu h1 {
-        font-size: 10px;
+        font-size: 24px;
     }
     .menu p {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     #menu_discription {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #reservation h1 {
-        font-size: 15px;
+        font-size: 24px;
     }
 }
