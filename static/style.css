@@ -65,7 +65,7 @@ header{
 
 #logo {
     font-family: 'Lilita One', cursive;
-    font-size: 50px;
+    font-size: 26px;
 }
 
 #id_comment {
@@ -104,7 +104,7 @@ li {
 }
 
 #about_us_hero_img {
-    height: 750px;
+    height: 450px;
     width: 100%;
     background: url(media/boba_history_header.jpg);
     background-size: cover;
@@ -323,7 +323,6 @@ footer ul li {
         width: 219px;
     }
 
-
     #reservation h1 {
         font-size: 24px;
     }
@@ -338,6 +337,23 @@ footer ul li {
     }
     
     #about_us_hero_img {
-        height: 820px;
+        height: 650px;
+    }
+
+    #history_bio {
+        text-align: center;
+    }
+
+    #history_bio h1 {
+        margin-bottom: 4%;
+    }
+
+    #crew_board {
+        max-width: 350px;
+        height: 250px;
+    }
+
+    #crew_board h1 {
+        margin-bottom: 8%;
     }
 }

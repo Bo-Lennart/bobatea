@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="subcontainer">
                     <nav class="navbar">
-                        <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Boba</a>
+                        <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Be-Be-Boba</a>
 
                         <ul class="nav_menu">
                             <li class="nav_item">
@@ -60,17 +60,16 @@
             <div>
                 <div id="about_us_hero_img">
                     <div id="menu_booking">
-                        <div id="menu" class="menu">
+                        <div id="history_bio" class="menu">
                             <h1>History</h1>
-                            <p>{{about.name}}</p>
                             <p>{{about.content}}</p>
                         </div>
 
-                        <div id="reservation" class="reservation_form">
+                        <div id="crew_board" class="reservation_form">
                             <h1>Crew</h1>
-                            <h4>{{staff_crew.name}}</h4>
-                            <h4>{{staff_crew.subtitle}}</h4>
-                            <h4>{{staff_crew.bio}}</h4>
+                            <p>{{staff_crew.name}}</p>
+                            <p>{{staff_crew.subtitle}}</p>
+                            <p>{{staff_crew.bio}}</p>
                             </form>
                         </div>
                     </div>
