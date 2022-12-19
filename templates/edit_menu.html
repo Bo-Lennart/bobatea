@@ -48,7 +48,9 @@
         </div>
     </header>
 <div id="home">
-    <h1>Update Menu Item:</h1>
+    
+    <div id="table_container">
+        <h1>Update Item:</h1>
     {% if user.is_authenticated %}
     <form method="POST" id="edit_menu_form">
         {% csrf_token %}
@@ -59,6 +61,7 @@
         </div>
     </form>
     {% endif %}
+    </div>
 
 </div>
     <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>

@@ -49,16 +49,20 @@
             </div>
         </header>
 
-<h1>Edit Reservation</h1>
+<div id="home">
+    <div id="table_container">
+        <h1>Reservation</h1>
 {% if user.is_authenticated %}
-<form method="POST">
+<form method="POST" id="edit_menu_form">
     {% csrf_token %}
     {{ form.as_p }}
         <p>
-            <button type="submit">Update Reservation</button>
+            <button type="submit">Update</button>
         </p>
     </div>
+    </div>
     {% endif %}
+</div>
 <footer>
     <div id="social_media_links">
         <ul>
