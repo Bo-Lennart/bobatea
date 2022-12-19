@@ -224,7 +224,40 @@ footer ul li {
     padding: 5% 0;
 }
 
+#staff_page_menu {
+    width: 100%;
+}
 
+#staff_page_menu td {
+    width: 20%;
+    margin: 10%;
+}
+
+#staff_menu_name {
+    text-align: left;
+}
+
+#staff_menu_quantity {
+    text-align: end;
+}
+
+#staff_menu_price {
+    text-align: end;
+}
+
+#staff_page_menu button {
+    margin-left: 10%;
+    width: 100px;
+    height: 30px;
+    border-radius: 8%;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#quantity_nr {
+    text-align: end;
+}
 
 
 @media(max-width:1600px){

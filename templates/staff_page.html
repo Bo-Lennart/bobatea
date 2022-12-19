@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    
     <title>Staff Page</title>
 </head>
 
@@ -58,9 +59,9 @@
         {% for item in menu %}
         <table id="staff_page_menu">
             <tr>
-                <td>{{item}}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.price}} £</td>
+                <td id="staff_menu_name">{{item}}</td>
+                <td id="staff_menu_quantity">{{item.quantity}}</td>
+                <td id="staff_menu_price">{{item.price}} £</td>
                 <td>
                     <a href="/edit/{{ item.id }}">
                         <button>Edit</button>
