@@ -78,10 +78,14 @@
 {% for reservation in reservations %}
    <table>
     <tr>
-    <td>Reservation made by: {{reservation.name}}</td>  
-    <td>Reserved Date: {{reservation.date}}</td>  
-    <td>Number of Guests: {{reservation.number_of_guests}}</td>
-    <td>Time: {{reservation.time}}</td>
+    <td>Reservation made by: <br> 
+        {{reservation.name}}</td>  
+    <td>Reserved Date: <br>
+        {{reservation.date}}</td>  
+    <td>Number of Guests: <br>
+        {{reservation.number_of_guests}}</td>
+    <td>Time: <br>
+        {{reservation.time}}</td>
     <td>
         <a href="/edit_reservation/{{ reservation.id }}">
             <button>Edit</button>
@@ -96,6 +100,32 @@
 {% endfor %}
 </table>
 <a href="{% url 'staff_reserve_table' %}">Make Reservation</a>
+
+<h1>Cancelations:</h1>
+
+   <table>
+    <tr>
+    <td>Reservation made by: <br> 
+        {{canceletion.name}}</td>  
+    <td>Reserved Date: <br>
+        {{canceletion.date}}</td>  
+    <td>Time: <br>
+        {{canceletion.time}}</td>
+    <td>Number of Guests: <br>
+        {{canceletion.comment}}
+    </td>
+    <td>
+        <a href="/edit_reservation/{{ reservation.id }}">
+            <button>Edit</button>
+        </a>
+    </td>
+    <td>
+        <a href="/remove/{{ reservation.id }}">
+            <button onclick="deleteReservation()">Delete Reservation</button>
+        </a>
+    </td>
+    </tr>
+</table>
 {% endif %}
 
 <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>

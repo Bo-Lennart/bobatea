@@ -69,7 +69,6 @@ class CancelReservation(models.Model):
     name = models.CharField(max_length=50)
     date = models.DateField()
     time = models.TimeField()
-    comment = models.TextField()
 
     def __str__(self):
         return self.name
