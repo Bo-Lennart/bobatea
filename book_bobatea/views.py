@@ -12,40 +12,12 @@ def get_menu(request):
         reserve_form = ReserveTableForm(request.POST)
         if reserve_form.is_valid():
             reserve_form.save()
+        return redirect(about)
 
     context = {'menu': menu,
     'form': reserve_form}
 
     return render(request, '../templates/base.html', context)
-
-
-def staff_reserve_table(request):
-    reserve_form = ReserveTableForm()
-
-    if request.method == 'POST':
-        reserve_form = ReserveTableForm(request.POST)
-        if reserve_form.is_valid():
-            reserve_form.save()
-        return redirect(staff_page)
-        
-
-    context = {'form': reserve_form}
-
-    return render(request, '../templates/staff_reservation.html', context)
-
-
-def reserve_table(request):
-    reserve_form = ReserveTableForm()
-
-    if request.method == 'POST':
-        reserve_form = ReserveTableForm(request.POST)
-        if reserve_form.is_valid():
-            reserve_form.save()
-
-    context = {'form': reserve_form}
-
-    return render(request, '../templates/reservation.html', context)
-
 
 
 def about(request):
@@ -67,6 +39,7 @@ def contact(request):
         cancel_form = CancelReservationForm(request.POST)
         if cancel_form.is_valid():
             cancel_form.save()
+        return redirect(get_menu)
 
     context = {'form': cancel_form}
 
@@ -146,8 +119,3 @@ def delete_cancelation(request, CancelReservation_id):
     cancelation = get_object_or_404(CancelReservation, id=CancelReservation_id)
     cancelation.delete()
     return redirect(staff_page)
-
-
-def reservation_confirmation(request):
-
-    return render(request, '../templates/reservation_confirmation.html', )
