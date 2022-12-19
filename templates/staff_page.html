@@ -105,6 +105,28 @@
         <a href="{% url 'staff_reserve_table' %}">Make Reservation
             <button>Make Reservation</button>
         </a>
+
+        {% for cancelation in cancelations %}
+        <table>
+            <tr>
+                <td>Reservation made by: <br>
+                    {{cancelation.name}}</td>
+                <td>Reserved Date: <br>
+                    {{cancelation.date}}</td>
+                <td>Time: <br>
+                    {{cancelation.time}}</td>
+                <td>
+                    <a href="/edit_reservation/{{ reservation.id }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/remove/{{ reservation.id }}">
+                        <button onclick="deleteReservation()">Delete Reservation</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
         {% endif %}
 
     </div>

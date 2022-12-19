@@ -32,4 +32,5 @@ urlpatterns = [
     path('delete/<TeaMenu_id>/', views.delete_menu_item, name='delete_menu_item'),
     path('remove/<Reservation_id>/', views.remove_reservation, name='remove_reservation'),
     path('reservation_confirmation/', views.reservation_confirmation, name='confirmation_page'),
+    path('delete_cancelation/<CancelReservation_id>', views.delete_cancelation, name='delete_cancelation')
 ]
