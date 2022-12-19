@@ -191,7 +191,6 @@ input {
 
 .reservation_form button {
     padding: 10px 15px;
-    float: right;
     transition-duration: 0.2s;
     margin: 5% 0 5% 0%;
     margin-bottom: 0;
@@ -360,7 +359,7 @@ footer ul li {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: rgb(16, 16, 16);
+        background-color: rgb(40, 40, 40);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -416,7 +415,6 @@ footer ul li {
 
     .reservation_form {
         max-width: 219px;
-        height: 450px;
         float: none;
         text-align:center;
     }
