@@ -242,8 +242,9 @@ footer ul li {
 
 #edit_menu_form {
     width: 220px;
+    height: 430px;
     border: solid 1px black;
-    text-align-last: center;
+    text-align: center;
 }
 
 #edit_menu_form input {
@@ -260,6 +261,8 @@ footer ul li {
     background-color: black;
     color: white;
     font-family: 'Lilita One', cursive;
+    margin: 12%;
+    float: right;
 }
 
 #edit_menu_form button:hover {
@@ -268,7 +271,7 @@ footer ul li {
 }
 
 #edit_menu_form textarea {
-    width: 150px;
+    width: 182px;
     height: 100px;
     border: solid 1px black;
 }
