@@ -65,9 +65,9 @@ header{
 
 #staff_home {
     margin-top: 70px;
-    display: inline-block;
     width: 100%;
-    
+    text-align: center;
+    align-content: center;
 }
 
 #logo {
@@ -280,6 +280,16 @@ footer ul li {
 #staff_home button:hover {
     background-color: pink;
     color: black;
+}
+
+#table_container {
+    justify-content: center;
+    display: grid;
+}
+
+#staff_heading {
+    font-family: 'Lilita One', cursive;
+    font-size: 55px;
 }
 
 

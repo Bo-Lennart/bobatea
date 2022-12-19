@@ -52,82 +52,89 @@
     </header>
     <div id="staff_home">
 
-        <h1>STAFF PAGE</h1>
+        <h1 id="staff_heading">STAFF PAGE</h1>
 
         {% if user.is_authenticated %}
         <h1>Edit Menu:</h1>
         {% for item in menu %}
-        <table id="staff_page_table">
+<div id="table_container">
+    <table id="staff_page_table">
+        <tr>
+            <td id="staff_menu_name">{{item}}</td>
             <tr>
-                <td id="staff_menu_name">{{item}}</td>
-                <tr>
-                    <td id="staff_menu_quantity">{{item.quantity}}</td>
-                <td id="staff_menu_price">{{item.price}} £</td>
-                </tr>
-                <tr>
-                    <td id="td_button">
-                        <a href="/edit/{{ item.id }}">
-                            <button>Edit</button>
-                        </a>
-                    </td>
-                    <td id="td_button">
-                        <a href="/delete/{{ item.id }}">
-                            <button>Delete</button>
-                        </a>
-                    </td>
-                </tr>
+                <td id="staff_menu_quantity">{{item.quantity}}</td>
+            <td id="staff_menu_price">{{item.price}} £</td>
             </tr>
-            {% endfor %}
-        </table>
+            <tr>
+                <td id="td_button">
+                    <a href="/edit/{{ item.id }}">
+                        <button>Edit</button>
+                    </a>
+                </td>
+                <td id="td_button">
+                    <a href="/delete/{{ item.id }}">
+                        <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
         <a href="{% url 'add_menu_item' %}">Add item to menu</a>
 
         <h1>Reservations:</h1>
 
         {% for reservation in reservations %}
-        <table id="staff_page_reservation_table">
+<div id="table_container">
+    <table id="staff_page_reservation_table">
+        <tr>
+            <td id="staff_reservation_name">
+                {{reservation.name}}</td>
+            <td>
+                {{reservation.date}}</td>
             <tr>
-                <td id="staff_reservation_name">
-                    {{reservation.name}}</td>
                 <td>
-                    {{reservation.date}}</td>
-                <tr>
-                    <td>
-                        {{reservation.number_of_guests}} guests</td>
-                    <td>
-                        {{reservation.time}}</td>
-                </tr>
-                <tr><td id="td_button">
-                    <a href="/edit_reservation/{{ reservation.id }}">
-                        <button>Edit</button>
-                    </a>
-                </td>
-                <td id="td_button">
-                    <a href="/remove/{{ reservation.id }}">
-                        <button onclick="deleteReservation()">Delete</button>
-                    </a>
-                </td></tr>
+                    {{reservation.number_of_guests}} guests</td>
+                <td>
+                    {{reservation.time}}</td>
             </tr>
-            {% endfor %}
-        </table>
+            <tr><td id="td_button">
+                <a href="/edit_reservation/{{ reservation.id }}">
+                    <button>Edit</button>
+                </a>
+            </td>
+            <td id="td_button">
+                <a href="/remove/{{ reservation.id }}">
+                    <button onclick="deleteReservation()">Delete</button>
+                </a>
+            </td></tr>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 
         <h1>Canceled Reservations:</h1>
         {% for cancelation in cancelations %}
-        <table id="staff_page_reservation_table">
-            <tr>
-                <td id="staff_cancelation_name">
-                    {{cancelation.name}}</td>
-                <td>
-                    {{cancelation.date}}</td>
-                <td>
-                    {{cancelation.time}}</td>
-                <td id="td_button">
-                    <a href="/delete_cancelation/{{ cancelation.id }}">
-                        <button onclick="delete_cancelation()">Delete</button>
-                    </a>
-                </td>
-            </tr>
-            {% endfor %}
-            {% endif %}
+<div id="table_container">
+    <table id="staff_page_reservation_table">
+        <tr>
+            <td id="staff_cancelation_name">
+                {{cancelation.name}}</td>
+            <td>
+                {{cancelation.date}}</td>
+            <td>
+                {{cancelation.time}}</td>
+            <td id="td_button">
+                <a href="/delete_cancelation/{{ cancelation.id }}">
+                    <button onclick="delete_cancelation()">Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</div>
 
     </div>
     <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
