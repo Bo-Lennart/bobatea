@@ -240,6 +240,38 @@ footer ul li {
     border: solid 1px black;
 }
 
+#edit_menu_form {
+    width: 220px;
+    border: solid 1px black;
+    text-align-last: center;
+}
+
+#edit_menu_form input {
+    border: solid 1px black;
+    margin: 1%;
+}
+
+#edit_menu_form button {
+    margin-left: 10%;
+    width: 60px;
+    height: 30px;
+    border-radius: 8%;
+    background-color: black;
+    color: white;
+    font-family: 'Lilita One', cursive;
+}
+
+#edit_menu_form button:hover {
+    background-color: pink;
+    color: black;
+}
+
+#edit_menu_form textarea {
+    width: 150px;
+    height: 100px;
+    border: solid 1px black;
+}
+
 #staff_page_table td {
     width: 50%;
     margin: 10%;
