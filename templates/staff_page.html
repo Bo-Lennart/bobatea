@@ -116,13 +116,8 @@
                 <td>Time: <br>
                     {{cancelation.time}}</td>
                 <td>
-                    <a href="/edit_reservation/{{ reservation.id }}">
-                        <button>Edit</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/remove/{{ reservation.id }}">
-                        <button onclick="deleteReservation()">Delete Reservation</button>
+                    <a href="/delete_cancelation/{{ cancelation.id }}">
+                        <button onclick="delete_cancelation()">Delete</button>
                     </a>
                 </td>
             </tr>
