@@ -65,6 +65,9 @@ header{
 
 #staff_home {
     margin-top: 70px;
+    display: inline-block;
+    width: 100%;
+    
 }
 
 #logo {
@@ -224,34 +227,44 @@ footer ul li {
     font-size: 35px;
 }
 
+#staff_home h1 {
+    margin-bottom: 2%;
+}
+
 #social_media_links {
     padding: 5% 0;
 }
 
 #staff_page_table {
-    width: 100%;
+    width: 200px;
+    border: solid 1px black;
 }
 
 #staff_page_table td {
-    width: 20%;
+    width: 50%;
     margin: 10%;
+    font-size: 13px;
 }
 
-#staff_page_reservation_table td {
-    width: 10%;
+#staff_page_reservation_table {
+    width: 200px;
+    text-align: left;
+    font-size: 13px;
+    border: solid 1px black;
 }
 
-#staff_menu_name {
+#staff_page_reservation_table td{
+    width: 50%;
+    display: inline-table;
+}
+
+#staff_menu_name, #staff_reservation_name, #staff_cancelation_name {
     text-align: left;
     font-family: 'Lilita One', cursive;
 }
 
-#staff_menu_quantity {
-    text-align: end;
-}
-
-#staff_menu_price {
-    text-align: end;
+#td_button {
+    width: 20%;
 }
 
 #staff_home button {

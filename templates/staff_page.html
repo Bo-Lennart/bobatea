@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
-    
+
     <title>Staff Page</title>
 </head>
 
@@ -60,18 +60,22 @@
         <table id="staff_page_table">
             <tr>
                 <td id="staff_menu_name">{{item}}</td>
-                <td id="staff_menu_quantity">{{item.quantity}}</td>
+                <tr>
+                    <td id="staff_menu_quantity">{{item.quantity}}</td>
                 <td id="staff_menu_price">{{item.price}} £</td>
-                <td>
-                    <a href="/edit/{{ item.id }}">
-                        <button>Edit</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/delete/{{ item.id }}">
-                        <button>Delete</button>
-                    </a>
-                </td>
+                </tr>
+                <tr>
+                    <td id="td_button">
+                        <a href="/edit/{{ item.id }}">
+                            <button>Edit</button>
+                        </a>
+                    </td>
+                    <td id="td_button">
+                        <a href="/delete/{{ item.id }}">
+                            <button>Delete</button>
+                        </a>
+                    </td>
+                </tr>
             </tr>
             {% endfor %}
         </table>
@@ -82,24 +86,26 @@
         {% for reservation in reservations %}
         <table id="staff_page_reservation_table">
             <tr>
-                <td>Name: <br>
+                <td id="staff_reservation_name">
                     {{reservation.name}}</td>
-                <td>Date: <br>
-                    {{reservation.date}}</td>
-                <td>Guests: <br>
-                    {{reservation.number_of_guests}}</td>
-                <td>Time: <br>
-                    {{reservation.time}}</td>
                 <td>
+                    {{reservation.date}}</td>
+                <tr>
+                    <td>
+                        {{reservation.number_of_guests}} guests</td>
+                    <td>
+                        {{reservation.time}}</td>
+                </tr>
+                <tr><td id="td_button">
                     <a href="/edit_reservation/{{ reservation.id }}">
                         <button>Edit</button>
                     </a>
                 </td>
-                <td>
+                <td id="td_button">
                     <a href="/remove/{{ reservation.id }}">
                         <button onclick="deleteReservation()">Delete</button>
                     </a>
-                </td>
+                </td></tr>
             </tr>
             {% endfor %}
         </table>
@@ -108,20 +114,20 @@
         {% for cancelation in cancelations %}
         <table id="staff_page_reservation_table">
             <tr>
-                <td>Reservation made by: <br>
+                <td id="staff_cancelation_name">
                     {{cancelation.name}}</td>
-                <td>Reserved Date: <br>
-                    {{cancelation.date}}</td>
-                <td>Time: <br>
-                    {{cancelation.time}}</td>
                 <td>
+                    {{cancelation.date}}</td>
+                <td>
+                    {{cancelation.time}}</td>
+                <td id="td_button">
                     <a href="/delete_cancelation/{{ cancelation.id }}">
                         <button onclick="delete_cancelation()">Delete</button>
                     </a>
                 </td>
             </tr>
             {% endfor %}
-        {% endif %}
+            {% endif %}
 
     </div>
     <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
