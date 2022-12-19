@@ -249,6 +249,7 @@ footer ul li {
 #edit_menu_form input {
     border: solid 1px black;
     margin: 1%;
+    float: none;
 }
 
 #edit_menu_form button {
