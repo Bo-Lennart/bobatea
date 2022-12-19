@@ -36,6 +36,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["bookboba.herokuapp.com", "localhost"]
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
