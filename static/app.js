@@ -38,6 +38,10 @@ function reservationEditedAlert() {
     alert("Reservation has been updated");
 }
 
+function reservationSubmited() {
+    alert("Reservation has been made");
+}
+
 today = yyyy + '-' + mm + '-' + dd;
 
 
