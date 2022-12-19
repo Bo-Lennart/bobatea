@@ -70,6 +70,10 @@ header{
     align-content: center;
 }
 
+#crew_board {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 #logo {
     font-family: 'Lilita One', cursive;
     font-size: 26px;
@@ -239,6 +243,10 @@ footer ul li {
     border: solid 1px black;
 }
 
+#add_menu_item button{
+    margin: 2%;
+}
+
 #sign_out_button {
     margin-left: 10%;
     width: 100px;
@@ -367,6 +375,10 @@ footer ul li {
 #staff_home button:hover {
     background-color: pink;
     color: black;
+}
+
+table {
+    margin-bottom: 5%;
 }
 
 #table_container {

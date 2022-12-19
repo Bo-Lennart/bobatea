@@ -56,7 +56,7 @@
         {% csrf_token %}
         {{ form.as_p }}
             <p>
-                <button type="submit">Update Item</button>
+                <button type="submit" onclick="itemEditedAlert()">Update Item</button>
             </p>
         </div>
     </form>

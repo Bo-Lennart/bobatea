@@ -73,7 +73,7 @@
                 </td>
                 <td id="td_button">
                     <a href="/delete/{{ item.id }}">
-                        <button>Delete</button>
+                        <button onclick="deleteItemMenuAlert()">Delete</button>
                     </a>
                 </td>
             </tr>
@@ -81,7 +81,9 @@
         {% endfor %}
     </table>
 </div>
-        <a href="{% url 'add_menu_item' %}">Add item to menu</a>
+        <a href="{% url 'add_menu_item' %}" id="add_menu_item">
+            <button >Add item to menu</button>
+        </a>
 
         <h1>Reservations:</h1>
 
@@ -106,7 +108,7 @@
             </td>
             <td id="td_button">
                 <a href="/remove/{{ reservation.id }}">
-                    <button onclick="deleteReservation()">Delete</button>
+                    <button onclick="deleteReservationAlert()">Delete</button>
                 </a>
             </td></tr>
         </tr>
@@ -127,7 +129,7 @@
                 {{cancelation.time}}</td>
             <td id="td_button">
                 <a href="/delete_cancelation/{{ cancelation.id }}">
-                    <button onclick="delete_cancelation()">Delete</button>
+                    <button onclick="deleteCancelationAlert()">Delete</button>
                 </a>
             </td>
         </tr>
