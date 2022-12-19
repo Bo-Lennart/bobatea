@@ -53,7 +53,7 @@
     
     <div id="table_container">
         <h1>Update Item:</h1>
-    {% if user.is_authenticated %}
+    {% if user.is_superuser %}
     <form method="POST" id="edit_menu_form">
         {% csrf_token %}
         {{ form.as_p }}
