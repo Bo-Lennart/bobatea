@@ -1,7 +1,7 @@
 
 # Be-Be-Boba - Portfolio Project 4
 
-Be-Be-Boba is a restaurant that serves bubble tea. The website is a system that gives customers the ability to make/cancel bookings, check out the menu as well as read about the history of Be-Be-Boba. Furthermore staff has access to login and manage bookings where they are able to see the bookings and have a list of cancelations.
+Be-Be-Boba is a restaurant that serves bubble tea. The website is a system that gives customers the ability to make/cancel bookings, check out the menu as well as read about the history of Be-Be-Boba. Furthermore, staff has access to a login and manage bookings where they are able to see the bookings and have a list of cancellations.
 The manager login has access to edit the menu.
 
 You can access the deployed system/web page here: <a href="https://bookboba.herokuapp.com/" target="_blank">Be-Be-Boba Home Page</a>
@@ -17,7 +17,7 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [Agile Method](#agile-method)
 - [Features](#features)
     - [Reservation feature](#reservation-feature)
-    - [Cancelation Form](#cancelation-form)
+    - [Cancellation Form](#cancellation-form)
     - [Staff Page](#staff-page)
     - [Navigation bar](#navigation-bar)
 - [Technologies Used](#technologies-used)
@@ -90,7 +90,7 @@ When the user enters the home page they see the menu followed by a reservation f
 
 When the form is filled out the user is notified and redirected to the 'about us page'. What happens in the background is that the reservation is stored in the data base and can now be seen bu the staff in the staff page, where staff can edit & delete the reservation. 
 
-## Cancelation form
+## Cancellation form
 
 If a user/customer has made a booking and wants to cancel a booking that can fill out the following form on the 'contact us' page. This cancelation will then be reflected on the staff page for the staff to see.
 
