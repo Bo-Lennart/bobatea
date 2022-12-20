@@ -4,6 +4,7 @@ from .forms import ReserveTableForm, add_item_to_menu_form, CancelReservationFor
 
 # Create your views here.
 
+
 def get_menu(request):
     menu = TeaMenu.objects.all()
     reserve_form = ReserveTableForm()
@@ -14,8 +15,7 @@ def get_menu(request):
             reserve_form.save()
         return redirect(about)
 
-    context = {'menu': menu,
-    'form': reserve_form}
+    context = {'menu': menu, 'form': reserve_form}
 
     return render(request, '../templates/base.html', context)
 
@@ -51,10 +51,7 @@ def staff_page(request):
     reservations = Reservation.objects.all()
     cancelations = CancelReservation.objects.all()
 
-    context = {'menu': menu,
-    'reservations': reservations,
-    'cancelations': cancelations,
-    }
+    context = {'menu': menu, 'reservations': reservations, 'cancelations': cancelations}
 
     return render(request, '../templates/staff_page.html', context)
 

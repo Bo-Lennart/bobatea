@@ -37,7 +37,6 @@ class Reservation(models.Model):
 
     def __str__(self):
         return self.name
-        
 
 
 class AboutUs(models.Model):
