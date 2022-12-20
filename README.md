@@ -226,4 +226,24 @@ if os.path.isfile("env.py"):
 ]")
     - Remove the insecure secret key and replace it with ("SECRET_KEY")
     - Comment out the old DataBases Section
+    - Add new DATABASES Section (DATABASES = {
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}")
+    - Terminal: Save all files and Make Migrations
 6. Get our static and media files stored on Cloudinary.
+    - Go to cloudinary.com and log in.
+    - Copy your CLOUDINARY_URL e.g. API Environment Variable.
+    - in env.py file -> Add Cloudinary URL
+    - heroku.com -> Add Cloudinary URL to Heroku Config Vars - be sure to paste in the correct section of the link
+    - Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment)
+    - In settings.py -> Add Cloudinary Libraries to installed apps
+    - Tell Django to use Cloudinary to store media and static files, place under the Static files note 
+    (STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+)
