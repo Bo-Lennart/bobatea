@@ -148,4 +148,6 @@ The Javascript file was validated with JSHint. There were warnings such as: coup
 
 When it comes to the testing of the code, an outcome of errors were detected when running the W3C Validator for CSS and HTML. These were errors regarding the syntax used for the Built-in template tags ( '{% %}'  ). Therefore I ignored these errors since I did not find any way to let the test ignore these.
 
+In the CSS there was an operator error found which has been resolved.
+
 ![IMAGE ALT TEXT HERE](/docs/screenshots/w3c_validation.png)
