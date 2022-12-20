@@ -163,3 +163,8 @@ All bugs that I've found have been resolved. Among these were the following:
 - No static files were loaded upon deployment.
     - I missunderstood how the 'load static' worked and thought that css stylesheet and JS as well as pictures were loaded without the {% static %} implementation. Once I deployed the project and removed the "DEBUG = False", I realized that no styling or media was loaded. Eventually I understood the mistake while searching on google for hours and realized how to link the files properly.
 
+- Calendar picker loading previous dates.
+    - When I added the calendar picker to the form it displayed previous dates. I didn't want that to happen and with some javascript manipulation I finally was able to set the min attribute on the date element.
+
+- Model fields (Textfield, datefield, timefield), not user friendly.
+    - The default model.models for the form fields of reserving tables model was just a textfield and said that the input was unvalid if not written with 'yyyy-mm-dd'. After lots of googling I found out that I could set attributes inside the forms.py file and managed to set the type to date and time. These loaded the calendar and time picker. I also added the min and max time for the time field so a user could not book slots before 12:00 and after 21:00.
