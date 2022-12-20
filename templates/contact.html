@@ -70,12 +70,12 @@
 
                     </div>
 
-                    <div id="reservation" class="reservation_form">
+                    <div id="reservation" class="reservation_form" onsubmit="reservationSubmited()"">
                         <form action="" method="POST">
                             <h1>Cancellation Form:</h1>
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <button type="submit" id="submit_reservation" onclick="reservationSubmited()">Submit</button>
+                            <button type="submit" id="submit_reservation">Submit</button>
                         </form>
                     </div>
                 </div>
