@@ -32,6 +32,8 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [Deployment](#deployment)
     - [Deploy Locally](#deploy-locally)
     - [Deploy an app to Heroku](#deploying-an-app-to-heroku)
+    - [Fork Repository to github](#fork-repository-to-github)
+    - [Clone Repository on github](#clone-repository-on-github)
 - [Credits](#credits)
 
 # Project Aim
@@ -265,6 +267,21 @@ if os.path.isfile("env.py"):
     - When it's time for the final deployment the Debug inside settings.py file has to be set to 'False'. Otherwise the deployment will fale. 
     - Furthermore the "DISABLE_COLLECTSTATIC" inside config cars on heroku has to be removed.
     - Then you click deploy and it all deployes.
+
+## Fork Repository to GitHub
+Forking the GitHub account creates a copy of the Repository. Changes can be made to this copy without affecting the original.
+
+1. Log in to GitHub and locate the desired repository
+2. Click the Fork button in the top corner, inline with the repository name.
+
+## Clone Repository on GitHub
+
+1. Click the code button underneath the main tab
+2. In the 'Clone with HTTPS' section, click the clipboard icon to copy the URL.
+3. Open Git Bash in your IDE of choice.
+4. Change the current working directory to where you want the cloned directory to be made.
+5. Type git clone, and then paste the URL copied from GitHub.
+6. Press enter and the clone of your repository will be created.
 
 # Credits
 
