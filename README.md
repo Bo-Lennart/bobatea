@@ -130,3 +130,5 @@ Manual testing has been carried out accordingly:
 * Tested that all forms post their data to the data base and that these are displayed where intended.
 * That restricted content only is displayed to the correct users when authenticated.
 * Tested CRUD features on the staff page and that these work and update the data base. 
+* Testing that all alerts trigger when intended to notify the user
+* All links have been tested that they work booth on smal screen devices and desktop sized screens
