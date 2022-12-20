@@ -181,7 +181,7 @@ All the bugs that I've found have been resolved. Among these were the following:
 
 - Among the major bugs mentioned above there were tons of smaller once such as the hamburger menu not being triggered properly, images not loading etc, etc.. These were rooted in syntax errors and were often discovered as I was going through the code and realized I had misspelled something, etc.
 
-- Known bugs: When submitting the forms the alert pops up even if the required fields are not filled out. Data is not submitted but this can be confusing for potential customers. Since I ran out of time I couldn't resolve this bug, however I know it exists and I with a little more time I would have worked on it!
+- During my final testing I realized that the alerts for the reservation and cancellation forms are triggered even though the form is not submitted. After some googling I found that I could place the 'onsubmit="function()"' inside the form tag to fix this bug.
 
 ## Mentor Session
 
