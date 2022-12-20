@@ -20,7 +20,6 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
     - [Staff Page](#staff-page)
     - [Navigation bar](#navigation-bar)
 - [Technologies Used](#technologies-used)
-    - [Python Libraries](#python-libraries)
 - [Testing](#testing)
     - [PEP8 Validator Extensions](#pep8-validator-extension)
     - [Manual Testing](#manual-testing)
