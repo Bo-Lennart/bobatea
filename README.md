@@ -124,3 +124,9 @@ Regarding a few long lines I could not shorten all of these because another pep8
 
 ## Manual Testing
 
+Manual testing has been carried out accordingly:
+
+* Tested all forms, through different web browsers (Firefox, Chrome & Safari).
+* Tested that all forms post their data to the data base and that these are displayed where intended.
+* That restricted content only is displayed to the correct users when authenticated.
+* Tested CRUD features on the staff page and that these work and update the data base. 
