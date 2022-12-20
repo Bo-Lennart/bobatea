@@ -246,3 +246,19 @@ if os.path.isfile("env.py"):
 
     MEDIA_URL = '/media/'
     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage')
+    - Link file to the templates directory in Heroku, Place under the BASE_DIR line
+    - Change the templates directory to TEMPLATES_DIR, Place within the TEMPLATES array
+    - Add Heroku Hostname to ALLOWED_HOSTS
+
+7. In gitpod:
+    - Create 3 new folders on top level directory (media, static, templates)
+    - Create procfile on the top level directory
+    - In Procfile: add "web: gunicorn PROJ_NAME.wsgi"
+    - Terminal: Add, Commit and Push
+
+8. Deploy Content manually through heroku.com inside your project on the deploy tab.
+
+9. Final deployment:
+    - When it's time for the final deployment the Debug inside settings.py file has to be set to 'False'. Otherwise the deployment will fale. 
+    - Furthermore the "DISABLE_COLLECTSTATIC" inside config cars on heroku has to be removed.
+    - Then you click deploy and it all deployes.
