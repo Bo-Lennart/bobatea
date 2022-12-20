@@ -105,7 +105,7 @@ Furthermore a hamburger menu feature has been added in order to give a cleaner e
 # Technologies Used
 * <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> - to provide structure to the templates that are loaded for the user.
 * <a href="https://en.wikipedia.org/wiki/CSS">CSS3</a> - styling the templates
-* <a href="https://en.wikipedia.org/wiki/JavaScript>JavaScript</a> - Manipulate the dom and build an interactive user expereience
+* <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> - Manipulate the dom and build an interactive user expereience
 * <a href="https://www.python.org/">Python</a> - to build functionality to the system
 * <a href="https://www.djangoproject.com/">Django</a> - framework that is used for this project
 * <a href="https://developer.chrome.com/docs/devtools/">Google Chrome DevTools</a> - Debugging
