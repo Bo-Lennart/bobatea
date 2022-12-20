@@ -50,3 +50,13 @@ The aim of this project has been to build a full-stack site based on business lo
 | 5 | User | As a staff user, I want to have the ability to see/edit and delete all the bookings that have come in | So I can have an overview of guests and adept the day accordingly |
 | 6 | User | As a staff user, I want to be able see all cancelations that have come in | So I can remove the reservations that have been cancelled |
 | 7 | User | As a manager user, I want be able to edit the menu | So I can add and remove items when the menu has to be updated |
+
+# agile-methodology
+
+For the project back-log I have used the built in "can ban alike" feature that can be found inside github. I made user stories in order to have a structured overview of which features I wanted for the system and website.
+
+The process has made it clear of what has to be done but also been iterative in forms of that I have adjusted the user stories when I realized that I had articulated in a different way than what turned out to be the final result for the page.
+
+Some user stories have been removed as the deadline was coming closer. Among the user stories that I did not have time to finish were: to limit booking slots to 30 min slots, prevent double bookings and refine the cancelation form so staff doesn't have to remove these "manually" on the staff page.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/agile_canban_user_stories.png)
