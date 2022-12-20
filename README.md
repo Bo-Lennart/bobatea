@@ -13,6 +13,7 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [User Experience](#user-experience)
     - [Site Aims](#site-aims)
     - [User Stories](#user-stories)
+    - [Wire Frames](#wire-frames)
 - [Agile Method](#agile-method)
 - [Features](#features)
     - [Reservation feature](#reservation-feature)
@@ -54,6 +55,12 @@ The aim of this project has been to build a full-stack site based on business lo
 | 6 | User | As a staff user, I want to be able see all cancelations that have come in | So I can remove the reservations that have been cancelled |
 | 7 | User | As a manager user, I want be able to edit the menu | So I can add and remove items when the menu has to be updated |
 |  | User | As a  user, I want to have a clear overview of how to navigate through the web page through the nav bar | So I can have a clear user navigation experience |
+
+## Wire Frames
+
+For the design thinking and briefing my layout in the early stages I made my own wireframes inside the mac os program 'pages'. These have helped me to structure the basics of my website and keep a consistant goal of where I'm heading with the UX in the early stages.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/wireframes.png)
 
 # Agile Method
 
