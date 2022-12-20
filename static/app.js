@@ -42,6 +42,10 @@ function reservationSubmited() {
     alert("Reservation has been made");
 }
 
+function cancelationSubmited() {
+    alert("Your cancelation has been registered");
+}
+
 today = yyyy + '-' + mm + '-' + dd;
 
 
