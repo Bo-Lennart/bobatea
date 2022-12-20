@@ -184,3 +184,46 @@ All bugs that I've found have been resolved. Among these were the following:
 
 # Deployment
 
+## Deploy locally
+
+1. Create repository from code institutes template.
+2. Installing Django and supporting libraries
+3. Install Django, gunicorn, dj3-cloudinary-storage, dj_database_url psycopg2
+4. Create requirements file -> pip3 freeze --local > requirements.txt
+5. Terminal: django-admin startproject 'Name of project ."
+6. Terminal: python3 manage.py startapp 'Name of app"
+7. Go to settings.py and update INSTALLED_APPS=['Add your app name here']
+8. Migrate changes -> Terminal: python3 manage.py migrate
+9. Run server for testing if django is setup etc - > python3 manage.py runserver
+
+## Deploying an app to Heroku
+
+1. Create a new external database (For this project I chose to do this inside Heroku directly and pay the 5$). But here are the steps for free user:
+    - On elephantsql.com
+    - Log in to your ElephantSQL account
+    - Click “Create New Instance”
+    - Set up your plan (name, tiny-turtle(free).) 
+    - Click “Select 
+    - Click “Review”
+    - Return to the ElephantSQL dashboard and click on the database instance name for this project
+    - Copy your ElephantSQL database URL using the Copy icon. It will start with postgres://
+2. Create the Heroku app
+    - Go to heroku.com and login
+    - Create new Heroku App
+    - Open the settings tab
+    - Click Reveal Config Vars
+    - Add a Config Var called DATABASE_URL
+4. Attach the database
+    - Create new env.py file on top level directory
+    - In env.py file: Import os library ("import os")
+    - Set environment variables ("os.environ["DATABASE_URL"] = "Paste in ElephantSQL database URL"")
+    - Add in secret key ("os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"")
+    - Add Secret Key to Config Vars at heroku.com 
+5. Prepare our environment and settings.py file
+    - Reference env.py ("from pathlib import Path import os [import dj_database_url
+if os.path.isfile("env.py"):
+   import env
+]")
+    - Remove the insecure secret key and replace it with ("SECRET_KEY")
+    - Comment out the old DataBases Section
+6. Get our static and media files stored on Cloudinary.
