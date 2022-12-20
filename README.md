@@ -139,3 +139,8 @@ Manual testing has been carried out accordingly:
 * Tested CRUD features on the staff page and that these work and update the data base. 
 * Testing that all alerts trigger when intended to notify the user
 * All links have been tested that they work both on smal screen devices and desktop sized screens
+
+## JsHint Validation
+
+The Javascript file was validated with JSHint. There were warnings such as: couple of undefined variables, missing semicolons
+
