@@ -24,6 +24,8 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [Testing](#testing)
     - [PEP8 Validator Extensions](#pep8-validator-extension)
     - [Manual Testing](#manual-testing)
+    - [JsHint Validation](#jshint-validation)
+    - [W3C Validator](#w3c-validator)
     - [Bug Fixes](#bug-fixes)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -151,3 +153,4 @@ When it comes to the testing of the code, an outcome of errors were detected whe
 In the CSS there was an operator error found which has been resolved.
 
 ![IMAGE ALT TEXT HERE](/docs/screenshots/w3c_validation.png)
+
