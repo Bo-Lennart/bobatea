@@ -168,3 +168,5 @@ All bugs that I've found have been resolved. Among these were the following:
 
 - Model fields (Textfield, datefield, timefield), not user friendly.
     - The default model.models for the form fields of reserving tables model was just a textfield and said that the input was unvalid if not written with 'yyyy-mm-dd'. After lots of googling I found out that I could set attributes inside the forms.py file and managed to set the type to date and time. These loaded the calendar and time picker. I also added the min and max time for the time field so a user could not book slots before 12:00 and after 21:00.
+
+- Among the major bugs mentioned above there were tons of smaller once such as the hamburger menu not being triggered properly, images not loading etc etc.. These were rooted in syntax errors and were often discoreved as I was going through the code and realized I had misspelled something etc.
