@@ -13,8 +13,12 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [User Experience](#user-experience)
     - [Site Aims](#site-aims)
     - [User Stories](#user-stories)
-- [Agile Methodology](#agile-methodology)
+- [Agile Method](#agile-method)
 - [Features](#features)
+    - [Reservation feature](#reservation-feature)
+    - [Cancelation Form](#cancelation-form)
+    - [Staff Page](#staff-page)
+    - [Navigation bar](#navigation-bar)
 - [Technologies Used](#technologies-used)
     - [Python Libraries](#python-libraries)
 - [Testing](#testing)
@@ -50,8 +54,9 @@ The aim of this project has been to build a full-stack site based on business lo
 | 5 | User | As a staff user, I want to have the ability to see/edit and delete all the bookings that have come in | So I can have an overview of guests and adept the day accordingly |
 | 6 | User | As a staff user, I want to be able see all cancelations that have come in | So I can remove the reservations that have been cancelled |
 | 7 | User | As a manager user, I want be able to edit the menu | So I can add and remove items when the menu has to be updated |
+|  | User | As a  user, I want to have a clear overview of how to navigate through the web page through the nav bar | So I can have a clear user navigation experience |
 
-# agile-methodology
+# Agile Method
 
 For the project back-log I have used the built in board feature that can be found inside github (canban similarities). I made user stories in order to have a structured overview of which features I wanted for the system and website.
 
@@ -63,3 +68,46 @@ Some user stories have been removed as the deadline was coming closer. Among the
 
 # Features
 
+## Reservation feature
+
+When the user enters the home page they see the menu followed by a reservation form.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/reserve_table.png)
+
+When the form is filled out the user is notified and redirected to the 'about us page'. What happens in the background is that the reservation is stored in the data base and can now be seen bu the staff in the staff page, where staff can edit & delete the reservation. 
+
+## Cancelation form
+
+If a user/customer has made a booking and wants to cancel a booking that can fill out the following form on the 'contact us' page. This cancelation will then be reflected on the staff page for the staff to see.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/cancelation_form.png)
+
+## Staff Page
+
+On the staff page the user has to be signed in in order to access the content. Depending on if the user is a super-user (manager user) or a staff user they will see the following features on the page. Since staff has not access to manipulate data that is desplayed to customers they can edit and manage bookings & cancelations.
+
+If the menu has to be updated a manger user needs to be logged in, in order to make edits.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/staff_page.png)
+
+When the user clicks on the edit buttons they will be redirected to the according pages where they can fill out what they wish to edit, which then will be reflected in the data-base and displayed.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/edit_menu_reservations.png)
+
+## Navigation bar
+
+The navigation bar offer a clear way to navigate through the different pages of the web page. Depending on if a user is logged in they will see different navigation bars.
+
+Furthermore a hamburger menu feature has been added in order to give a cleaner experience when using smaller screen sized devices.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/nav_bar.png)
+
+# Technologies Used
+* <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> - to provide structure to the templates that are loaded for the user.
+* <a href="https://en.wikipedia.org/wiki/CSS">CSS3</a> - styling the templates
+* <a href="https://en.wikipedia.org/wiki/JavaScript>JavaScript</a> - Manipulate the dom and build an interactive user expereience
+* <a href="https://www.python.org/">Python</a> - to build functionality to the system
+* <a href="https://www.djangoproject.com/">Django</a> - framework that is used for this project
+* <a href="https://developer.chrome.com/docs/devtools/">Google Chrome DevTools</a> - Debugging
+* <a href="https://www.gitpod.io/">Gitpod</a> - Used to create, edit and write the code for the program
+* <a href="https://dashboard.heroku.com/">Heroku</a> - Used to deploy the page
