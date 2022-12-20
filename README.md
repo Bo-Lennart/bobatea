@@ -293,4 +293,4 @@ Forking the GitHub account creates a copy of the Repository. Changes can be made
 * <a href="https://www.codegrepper.com/tpc/html+set+min+date+to+today">Set min date for datepicker</a> 
 * <a href="https://github.com/rhiannonmcn/connect-four">README structure inspiration</a> 
 
-Above the credits mentioned above I've use a lot of inspiration and trouble shooting in terms of going back to the modules inside Code institutes 'Full Stack Frameworks (FST)" module when I was stuck or was unsure of how to write the logic, classes etc. "Hello Django" and "I Think Therefor I Blog".
+Above the credits mentioned above I've use a lot of inspiration and trouble shooting in terms of going back to the modules inside Code institutes 'Full Stack Frameworks (FST)" module when I was stuck or was unsure of how to write the logic, classes etc. Modules used: "Hello Django" and "I Think Therefor I Blog". This is also where I learned the deployment process I used from the "I Think Therefor I Blog" module.
