@@ -27,6 +27,7 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
     - [JsHint Validation](#jshint-validation)
     - [W3C Validator](#w3c-validator)
     - [Bug Fixes](#bug-fixes)
+    - [Mentor Session](#mentor-session)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
@@ -131,6 +132,11 @@ Regarding a few long lines I could not shorten all of these because another pep8
 
 ![IMAGE ALT TEXT HERE](/docs/screenshots/pep8_validator.png)
 
+## Lighthouse
+Furthermore, testing has been carried out on Performance, Accessibility, Best Practices, and SEO via Lighthouse testing in Chrome DevTools. 
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/lighthouse.png)
+![IMAGE ALT TEXT HERE](/docs/screenshots/lighthouse_desktop.png)
 ## Manual Testing
 
 Manual testing has been carried out accordingly:
@@ -174,3 +180,6 @@ All bugs that I've found have been resolved. Among these were the following:
 ## Mentor Session
 
 - As time for dedline was closing up I realized I had to many feature ideas for the project and that I won't be able to code the detail features such as double bookings, 30 min time slot bookings etc. My mentor advices me to focus on what I had, make that code ready and then leave these "good to have features for another project". I deleted a few templates that I had made in the befinning and focused on what I had and to finish that. I'm very satified with the result but I also realize that there can be more done in terms of making the web app/system more effective for the user. However the main purpose and aim that I had for this project has been reached and my learning outcome has been huge. I feel a lot more confident and if I would have had more time to finish this project I know that I could have implemented the features that I had originally planned to have.
+
+# Deployment
+
