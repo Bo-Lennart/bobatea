@@ -70,7 +70,7 @@
                             <form action="" method="POST" id="reservation_form">
                                 {% csrf_token %}
                                 {{ form.as_p }}
-                                <button type="submit" id="submit_reservation" onsubmit="reservationSubmited()">Submit</button>
+                                <button type="submit" id="submit_reservation" onclick="reservationSubmited()">Submit</button>
                             </form>
                         </div>
                     </div>
