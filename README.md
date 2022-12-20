@@ -142,5 +142,10 @@ Manual testing has been carried out accordingly:
 
 ## JsHint Validation
 
-The Javascript file was validated with JSHint. There were warnings such as: couple of undefined variables, missing semicolons
+The Javascript file was validated with JSHint. There were warnings such as: couple of undefined variables, missing semicolons.
 
+## W3C Validator
+
+When it comes to the testing of the code, an outcome of errors were detected when running the W3C Validator for CSS and HTML. These were errors regarding the syntax used for the Built-in template tags ( '{% %}'  ). Therefore I ignored these errors since I did not find any way to let the test ignore these.
+
+![IMAGE ALT TEXT HERE](/docs/screenshots/w3c_validation.png)
