@@ -36,7 +36,17 @@ The aim of this project has been to build a full-stack site based on business lo
 
 * Customers: To provide a webpage where the customer can see the menu, make and cancel a booking as well as read about the restaurant.
 
-* Staff: To see and edit bookings and cancelations.
-* Staff Manager: To see and edit bookings, cancelations and the menu which is displayed for the customers that visit the home page.
+* Staff User: To see and edit bookings and cancelations.
+* Staff Manager User: To see and edit bookings, cancelations and the menu which is displayed for the customers that visit the home page.
 
 ## User Stories
+
+|  |  |  |   |
+|-----------------|:-------------|:---------------:|:---------------:|
+| 1 | User | As a user, I want to see a menu of the bubble tea that the restaurant offer | So I can choose if they have exciting flavours that I'd like to try|
+| 2 | User | As a user, I want to be able to book a table at the restaurant | So I can assure to get a table if I plan to visit the restaurant |
+| 3 | User | As a user, I want to be able to read about the history of the restaurant | So I can learn about the background of the restaurant |
+| 4 | User | As a user, I want to be able to cancel a booking and have access to contact information | So I can easerly get in touch if I have questions or need to cancel a booking |
+| 5 | User | As a staff user, I want to have the ability to see/edit and delete all the bookings that have come in | So I can have an overview of guests and adept the day accordingly |
+| 6 | User | As a staff user, I want to be able see all cancelations that have come in | So I can remove the reservations that have been cancelled |
+| 7 | User | As a manager user, I want be able to edit the menu | So I can add and remove items when the menu has to be updated |
