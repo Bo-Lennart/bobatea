@@ -58,89 +58,91 @@
         {% if user.is_authenticated %}
         <h1>Menu:</h1>
         {% for item in menu %}
-<div id="table_container">
-    <table id="staff_page_table">
-        <tr>
-            <td id="staff_menu_name">{{item}}</td>
-            <tr>
-                <td id="staff_menu_quantity">{{item.quantity}}</td>
-            <td id="staff_menu_price">{{item.price}} £</td>
-            </tr>
-            {% if user.is_superuser %}
-            <tr>
-                <td id="td_button">
-                    <a href="/edit/{{ item.id }}">
-                        <button>Edit</button>
-                    </a>
-                </td>
-                <td id="td_button">
-                    <a href="/delete/{{ item.id }}">
-                        <button onclick="deleteItemMenuAlert()">Delete</button>
-                    </a>
-                </td>
-            </tr>
-            {% endif %}
-        </tr>
-        {% endfor %}
-    </table>
-</div>
-{% if user.is_superuser %}
+        <div id="table_container">
+            <table id="staff_page_table">
+                <tr>
+                    <td id="staff_menu_name">{{item}}</td>
+                <tr>
+                    <td id="staff_menu_quantity">{{item.quantity}}</td>
+                    <td id="staff_menu_price">{{item.price}} £</td>
+                </tr>
+                {% if user.is_superuser %}
+                <tr>
+                    <td id="td_button">
+                        <a href="/edit/{{ item.id }}">
+                            <button>Edit</button>
+                        </a>
+                    </td>
+                    <td id="td_button">
+                        <a href="/delete/{{ item.id }}">
+                            <button onclick="deleteItemMenuAlert()">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        {% if user.is_superuser %}
         <a href="{% url 'add_menu_item' %}" id="add_menu_item">
-            <button >Add item to menu</button>
+            <button>Add item to menu</button>
         </a>
         {% endif %}
         <h1>Reservations:</h1>
 
         {% for reservation in reservations %}
-<div id="table_container">
-    <table id="staff_page_reservation_table">
-        <tr>
-            <td id="staff_reservation_name">
-                {{reservation.name}}</td>
-            <td>
-                {{reservation.date}}</td>
-            <tr>
-                <td>
-                    {{reservation.number_of_guests}} guests</td>
-                <td>
-                    {{reservation.time}}</td>
-            </tr>
-            <tr><td id="td_button">
-                <a href="/edit_reservation/{{ reservation.id }}">
-                    <button>Edit</button>
-                </a>
-            </td>
-            <td id="td_button">
-                <a href="/remove/{{ reservation.id }}">
-                    <button onclick="deleteReservationAlert()">Delete</button>
-                </a>
-            </td></tr>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
+        <div id="table_container">
+            <table id="staff_page_reservation_table">
+                <tr>
+                    <td id="staff_reservation_name">
+                        {{reservation.name}}</td>
+                    <td>
+                        {{reservation.date}}</td>
+                <tr>
+                    <td>
+                        {{reservation.number_of_guests}} guests</td>
+                    <td>
+                        {{reservation.time}}</td>
+                </tr>
+                <tr>
+                    <td id="td_button">
+                        <a href="/edit_reservation/{{ reservation.id }}">
+                            <button>Edit</button>
+                        </a>
+                    </td>
+                    <td id="td_button">
+                        <a href="/remove/{{ reservation.id }}">
+                            <button onclick="deleteReservationAlert()">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
 
         <h1>Cancelled Reservations:</h1>
         {% for cancelation in cancelations %}
-<div id="table_container">
-    <table id="staff_page_reservation_table">
-        <tr>
-            <td id="staff_cancelation_name">
-                {{cancelation.name}}</td>
-            <td>
-                {{cancelation.date}}</td>
-            <td>
-                {{cancelation.time}}</td>
-            <td id="td_button">
-                <a href="/delete_cancelation/{{ cancelation.id }}">
-                    <button onclick="deleteCancelationAlert()">Delete</button>
-                </a>
-            </td>
-        </tr>
-        {% endfor %}
-        {% endif %}
-    </table>
-</div>
+        <div id="table_container">
+            <table id="staff_page_reservation_table">
+                <tr>
+                    <td id="staff_cancelation_name">
+                        {{cancelation.name}}</td>
+                    <td>
+                        {{cancelation.date}}</td>
+                    <td>
+                        {{cancelation.time}}</td>
+                    <td id="td_button">
+                        <a href="/delete_cancelation/{{ cancelation.id }}">
+                            <button onclick="deleteCancelationAlert()">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </table>
+        </div>
 
     </div>
     <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>

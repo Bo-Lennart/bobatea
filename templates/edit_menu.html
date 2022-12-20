@@ -1,22 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="icon" type="image/x-icon" href="{% static 'media/fav_icon.png' %}">
-    
+
     <title>Edit Menu</title>
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="subcontainer">
                 <nav class="navbar">
                     <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Be-Be-Boba</a>
-                    
+
                     <ul class="nav_menu">
                         <li class="nav_item">
                             <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
@@ -49,24 +51,25 @@
             </div>
         </div>
     </header>
-<div id="home">
-    
-    <div id="table_container">
-        <h1>Update Item:</h1>
-    {% if user.is_superuser %}
-    <form method="POST" id="edit_menu_form">
-        {% csrf_token %}
-        {{ form.as_p }}
-            <p>
-                <button type="submit" onclick="itemEditedAlert()">Update Item</button>
-            </p>
+    <div id="home">
+
+        <div id="table_container">
+            <h1>Update Item:</h1>
+            {% if user.is_superuser %}
+            <form method="POST" id="edit_menu_form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <p>
+                    <button type="submit" onclick="itemEditedAlert()">Update Item</button>
+                </p>
         </div>
-    </form>
-    {% endif %}
+        </form>
+        {% endif %}
     </div>
 
-</div>
+    </div>
     <script src="https://kit.fontawesome.com/9cc43cc6da.js" crossorigin="anonymous"></script>
     <script src="{% static 'app.js' %}"></script>
 </body>
+
 </html>

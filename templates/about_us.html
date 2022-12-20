@@ -13,44 +13,44 @@
 </head>
 
 <body>
-        <header>
-            <div class="container">
-                <div class="subcontainer">
-                    <nav class="navbar">
-                        <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Be-Be-Boba</a>
+    <header>
+        <div class="container">
+            <div class="subcontainer">
+                <nav class="navbar">
+                    <a href="{% url 'menu' %}" aria-label="Go to home page" id="logo">Be-Be-Boba</a>
 
-                        <ul class="nav_menu">
-                            <li class="nav_item">
-                                <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="{% url 'about' %}" aria-label="Go to about page" class="nav-link">About</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="{% url 'contact' %}" aria-label="Contact us" class="nav-link">Contact Us</a>
-                            </li>
-                            {% if user.is_authenticated %}
-                            <li class="nav_item">
-                                <a href="{% url 'account_logout' %}" class="nav-link">Logout</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'staff' %}" class="nav-link">Staff Page</a>
-                            </li>
-                            {% else %}
-                            <li class="nav_item">
-                                <a href="{% url 'account_login' %}" class="nav-link">Staff Login</a>
-                            </li>
-                            {% endif %}
-                        </ul>
-                        <div class="hamburger">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
-                    </nav>
-                </div>
+                    <ul class="nav_menu">
+                        <li class="nav_item">
+                            <a aria-current="page" href="{% url 'menu' %}" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="{% url 'about' %}" aria-label="Go to about page" class="nav-link">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="{% url 'contact' %}" aria-label="Contact us" class="nav-link">Contact Us</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav_item">
+                            <a href="{% url 'account_logout' %}" class="nav-link">Logout</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'staff' %}" class="nav-link">Staff Page</a>
+                        </li>
+                        {% else %}
+                        <li class="nav_item">
+                            <a href="{% url 'account_login' %}" class="nav-link">Staff Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
             </div>
-        </header>
+        </div>
+    </header>
     <div id="home">
         <div>
             <div id="about_us_hero_img" style="background-image: url({% static 'media/boba_history_header.jpg' %});">
