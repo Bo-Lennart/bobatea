@@ -30,6 +30,8 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
     - [Bug Fixes](#bug-fixes)
     - [Mentor Session](#mentor-session)
 - [Deployment](#deployment)
+    - [Deploy Locally](#deploy-locally)
+    - [Deploy an app to Heroku](#deploying-an-app-to-heroku)
 - [Credits](#credits)
 
 # Project Aim
@@ -263,3 +265,4 @@ if os.path.isfile("env.py"):
     - When it's time for the final deployment the Debug inside settings.py file has to be set to 'False'. Otherwise the deployment will fale. 
     - Furthermore the "DISABLE_COLLECTSTATIC" inside config cars on heroku has to be removed.
     - Then you click deploy and it all deployes.
+
