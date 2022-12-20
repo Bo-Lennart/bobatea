@@ -268,3 +268,11 @@ if os.path.isfile("env.py"):
 
 # Credits
 
+Home Page Hero img: https://www.pexels.com/photo/woman-in-white-long-sleeve-shirt-holding-clear-plastic-cup-14267665/
+Contact us Hero img: https://www.pexels.com/photo/food-cold-spoon-summer-6413693/
+About us Hero img: https://www.pexels.com/photo/asian-restaurant-exterior-with-hieroglyphs-in-city-7136524/
+Fav Icon: https://www.pexels.com/photo/top-view-of-colorful-marshmallows-on-purple-background-4016581/
+Hamburger Menu: https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci
+Set min date for datepicker: https://www.codegrepper.com/tpc/html+set+min+date+to+today
+
+Above the credits mentioned above I've use a lot of inspiration and trouble shooting in terms of going back to the modules inside Code institutes 'Full Stack Frameworks (FST)" module when I was stuck or was unsure of how to write the logic, classes etc. "Hello Django" and "I Think Therefor I Blog".
