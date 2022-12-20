@@ -1,5 +1,5 @@
 
-# Be-Be-Boba - Portfolio project 4
+# Be-Be-Boba - Portfolio Project 4
 
 Be-Be-Boba is a restaurant that serves bubble tea. The website is a system that gives customers the ability to make/cancel bookings, check out the menu as well as read about the history of Be-Be-Boba. Furthermore staff has access to login and manage bookings where they are able to see the bookings and have a list of cancelations.
 The manager login has access to edit the menu.
@@ -265,4 +265,6 @@ if os.path.isfile("env.py"):
     - When it's time for the final deployment the Debug inside settings.py file has to be set to 'False'. Otherwise the deployment will fale. 
     - Furthermore the "DISABLE_COLLECTSTATIC" inside config cars on heroku has to be removed.
     - Then you click deploy and it all deployes.
+
+# Credits
 
