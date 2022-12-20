@@ -181,6 +181,8 @@ All the bugs that I've found have been resolved. Among these were the following:
 
 - Among the major bugs mentioned above there were tons of smaller once such as the hamburger menu not being triggered properly, images not loading etc, etc.. These were rooted in syntax errors and were often discovered as I was going through the code and realized I had misspelled something, etc.
 
+- Known bugs: When submitting the forms the alert pops up even if the required fields are not filled out. Data is not submitted but this can be confusing for potential customers. Since I ran out of time I couldn't resolve this bug, however I know it exists and I with a little more time I would have worked on it!
+
 ## Mentor Session
 
 - As time for deadline was closing up I realized I had to many feature ideas for the project and that I won't be able to code the detail features such as double bookings, 30 min time slot bookings etc. My mentor advised me to focus on what I had, make that code ready, and then leave these "good to have features for another project". I deleted a few templates that I had made in the beginning and focused on what I had and to finish that. I'm very satisfied with the result, but I also realize that there can be more done in terms of making the web app/system more effective for the user. However, the main purpose and aim that I had for this project has been reached and my learning outcome has been huge. I feel a lot more confident and if I would have had more time to finish this project, I know that I could have implemented the features that I had originally planned to have.
