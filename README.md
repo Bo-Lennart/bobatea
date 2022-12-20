@@ -24,6 +24,19 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [Deployment](#deployment)
 - [Credits](#credits)
 
-## Project Aim
+# Project Aim
 
 The aim of this project has been to build a full-stack site based on business logic used to control a centrally-owned dataset. Features such as user authentication, role based accessability to request and manipulate data as well as create a booking system where data is stored, updated and editable with the concept of 'CRUD' for (in this case) a bubble tea restaurant.
+
+# User Experience
+
+## Site Aims
+
+* To provide an interactive website/web-app/system that is accessible from desktops and mobile devices for booth potential customers & staff.
+
+* Customers: To provide a webpage where the customer can see the menu, make and cancel a booking as well as read about the restaurant.
+
+* Staff: To see and edit bookings and cancelations.
+* Staff Manager: To see and edit bookings, cancelations and the menu which is displayed for the customers that visit the home page.
+
+## User Stories
