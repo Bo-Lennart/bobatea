@@ -5,18 +5,17 @@ var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth() + 1;
 var yyyy = today.getFullYear();
-var todaysDate = new Date().getDate
+var todaysDate = new Date().getDate;
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle("active")
-    navMenu.classList.toggle("active")
-})
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
 
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}))
-
+}));
 
 function deleteCancelationAlert() {
     alert("Cancelation request has been deleted");
@@ -44,15 +43,14 @@ function reservationSubmited() {
 
 today = yyyy + '-' + mm + '-' + dd;
 
-
 if (dd < 10) {
-    dd = '0' + dd
+    dd = '0' + dd;
 }
 if (mm < 10) {
-    mm = '0' + mm
+    mm = '0' + mm;
 }
 
-var calendarElement = document.getElementById("id_date")
+var calendarElement = document.getElementById("id_date");
 
 if (calendarElement !== null) {
     calendarElement.setAttribute("min", today, "max", 'nextWeek');
