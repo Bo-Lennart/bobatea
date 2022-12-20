@@ -213,6 +213,7 @@ All bugs that I've found have been resolved. Among these were the following:
     - Open the settings tab
     - Click Reveal Config Vars
     - Add a Config Var called DATABASE_URL
+    - Link your repository from github and click 'connect'.
 4. Attach the database
     - Create new env.py file on top level directory
     - In env.py file: Import os library ("import os")
