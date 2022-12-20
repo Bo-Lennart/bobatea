@@ -75,7 +75,7 @@
                             <h1>Cancelation Form:</h1>
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <button type="submit">Submit</button>
+                            <button type="submit" id="submit_reservation" onclick="reservationSubmited()">Submit</button>
                         </form>
                     </div>
                 </div>
