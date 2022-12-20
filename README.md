@@ -118,8 +118,9 @@ Furthermore a hamburger menu feature has been added in order to give a cleaner e
 ## PEP8 Validator Extension
 Running the pep8 validator extension within gitpod showed a number of errors and warnings. Among these where syntax errors such as 2 blank lines after classes, trailing white spaces, function etc. Furthermore, long lines have been shortened and class names have been changed to camel cased, starting with a capital letter. 
 
-Regarding a few long lines I could not shorten a few of these because another pep8 warning came up as a result. Therefore I have kept these long and ignored that warning. 
+Regarding a few long lines I could not shorten all of these because another pep8 warning came up as a result. Therefore I have kept these long and ignored that warning. 
 
 ![IMAGE ALT TEXT HERE](/docs/screenshots/pep8_validator.png)
 
-## 
+## Manual Testing
+
