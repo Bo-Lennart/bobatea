@@ -154,3 +154,12 @@ In the CSS there was an operator error found which has been resolved.
 
 ![IMAGE ALT TEXT HERE](/docs/screenshots/w3c_validation.png)
 
+## Bug Fixes 
+
+All bugs that I've found have been resolved. Among these were the following:
+- Forms filled out not posting and adding the data to database.
+    - Solution: In the 'Action' tag inside the HTML I had linked the page I wanted the user to be redirected to. This blocked the the data somehow and caused that no data was posted to the DB. I realized that I could put the redirect request inside the 'views.py' in order to redirect the user to the page I wanted. Once I did that, the data was finally posted to the database.
+
+- No static files were loaded upon deployment.
+    - I missunderstood how the 'load static' worked and thought that css stylesheet and JS as well as pictures were loaded without the {% static %} implementation. Once I deployed the project and removed the "DEBUG = False", I realized that no styling or media was loaded. Eventually I understood the mistake while searching on google for hours and realized how to link the files properly.
+
