@@ -111,3 +111,5 @@ Furthermore a hamburger menu feature has been added in order to give a cleaner e
 * <a href="https://developer.chrome.com/docs/devtools/">Google Chrome DevTools</a> - Debugging
 * <a href="https://www.gitpod.io/">Gitpod</a> - Used to create, edit and write the code for the program
 * <a href="https://dashboard.heroku.com/">Heroku</a> - Used to deploy the page
+* <a href="https://www.elephantsql.com/">PostgreSQL</a> - Data base system used for this project
+* <a href="https://cloudinary.com/">PostgreSQL</a> - Cloud based image management service used for the project
