@@ -113,9 +113,13 @@ Furthermore a hamburger menu feature has been added in order to give a cleaner e
 * <a href="https://www.elephantsql.com/">PostgreSQL</a> - Data base system used for this project
 * <a href="https://cloudinary.com/">Cloudinary</a> - Cloud based image management service used for the project
 
+# Testing
+
 ## PEP8 Validator Extension
 Running the pep8 validator extension within gitpod showed a number of errors and warnings. Among these where syntax errors such as 2 blank lines after classes, trailing white spaces, function etc. Furthermore, long lines have been shortened and class names have been changed to camel cased, starting with a capital letter. 
 
 Regarding a few long lines I could not shorten a few of these because another pep8 warning came up as a result. Therefore I have kept these long and ignored that warning. 
 
-![IMAGE ALT TEXT HERE](../docs/screenshots/pep8_validator.png)
+![IMAGE ALT TEXT HERE](/docs/screenshots/pep8_validator.png)
+
+## 
