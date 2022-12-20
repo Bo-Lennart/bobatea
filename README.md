@@ -4,7 +4,7 @@
 Be-Be-Boba is a restaurant that serves bubble tea. The website is a system that gives customers the ability to make/cancel bookings, check out the menu as well as read about the history of Be-Be-Boba. Furthermore staff has access to login and manage bookings where they are able to see the bookings and have a list of cancelations.
 The manager login has access to edit the menu.
 
-You can access the deployed system/web page here: <a href="https://hangmanpp3.herokuapp.com/" target="_blank">Be-Be-Boba Home Page</a>
+You can access the deployed system/web page here: <a href="https://bookboba.herokuapp.com/" target="_blank">Be-Be-Boba Home Page</a>
 
 ![IMAGE ALT TEXT HERE](/docs/screenshots/responsive_header.png)
 
