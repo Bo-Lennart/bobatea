@@ -23,6 +23,7 @@ You can access the deployed system/web page here: <a href="https://bookboba.hero
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
     - [PEP8 Validator Extensions](#pep8-validator-extension)
+    - [Lighthouse](#lighthouse)
     - [Manual Testing](#manual-testing)
     - [JsHint Validation](#jshint-validation)
     - [W3C Validator](#w3c-validator)
